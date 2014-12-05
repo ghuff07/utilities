@@ -22,7 +22,7 @@ sudo chown -R "$(whoami)" /usr/local
 rvm get stable
 rvm requirements
 
-## ruby
+## ruby gems
 sudo gem update --system
 sudo gem update
 sudo gem cleanup
@@ -32,6 +32,6 @@ pip install --upgrade distribute
 pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
 
-# finish
+## finish
 diskutil repairPermissions /
 brew doctor
