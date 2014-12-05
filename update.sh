@@ -1,7 +1,7 @@
 #!/bin/bash -v
 sudo -v
 
-## MacOSX
+## OS X
 sudo softwareupdate -i -a
 
 ## brew
@@ -14,20 +14,24 @@ sudo brew cleanup
 
 ## npm
 sudo npm cache clean
-npm-check-updates -g
-read -p "Update packages manually and press any key... " -n 1
+sudo npm update -g
 sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 rvm get stable
+rvm requirements
 
 ## ruby
 sudo gem update --system
 sudo gem update
 sudo gem cleanup
 
+## pip
+pip install --upgrade distribute
+pip install --upgrade pip
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+
 # finish
 diskutil repairPermissions /
 brew doctor
-read -p "Fixed problem and press any key... " -n 1
