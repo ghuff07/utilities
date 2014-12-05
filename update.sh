@@ -19,7 +19,7 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
-rvm get stable
+rvm get stable --auto-dotfiles
 rvm requirements
 
 ## ruby gems
