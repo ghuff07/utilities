@@ -30,7 +30,7 @@ sudo gem cleanup
 ## pip
 pip install --upgrade distribute
 pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install --allow-external -U
 
 ## finish
 diskutil repairPermissions /
