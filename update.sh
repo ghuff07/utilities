@@ -13,7 +13,7 @@ brew upgrade
 sudo brew cleanup
 
 ## relink brew kegs
-brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite --force formula"
+brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 
 ## npm
 sudo npm cache clean
@@ -33,7 +33,7 @@ sudo gem cleanup
 ## pip
 pip install --upgrade distribute
 pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install --allow-external -U
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## finish
 diskutil repairPermissions /
