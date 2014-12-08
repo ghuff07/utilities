@@ -12,9 +12,8 @@ brew update
 brew upgrade
 sudo brew cleanup
 
-## relink openssl in case of brew update
-sudo rm -rf /usr/bin/openssl
-sudo ln -s `find /usr/local/Cellar/openssl -name openssl| grep \/bin` /usr/bin/openssl
+## relink brew kegs
+brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite --force formula"
 
 ## npm
 sudo npm cache clean
