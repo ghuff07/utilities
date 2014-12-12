@@ -35,6 +35,10 @@ pip install --upgrade distribute
 pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
+## pear
+pear update-channels
+pear upgrade-all
+
 ## finish
 diskutil repairPermissions /
 brew doctor
