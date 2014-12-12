@@ -31,6 +31,7 @@ sudo gem update
 sudo gem cleanup
 
 ## pip
+pip install --upgrade setuptools
 pip install --upgrade distribute
 pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
