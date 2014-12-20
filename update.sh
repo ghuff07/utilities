@@ -38,7 +38,7 @@ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pi
 
 ## pear
 pear update-channels
-pear upgrade-all
+sudo pear upgrade-all
 
 ## finish
 diskutil repairPermissions /
