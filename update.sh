@@ -16,6 +16,7 @@ sudo brew cleanup
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 
 ## npm
+npm install -g npm@latest
 sudo npm cache clean
 sudo npm update -g
 sudo chown -R "$(whoami)" ~/.npm
