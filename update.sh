@@ -23,7 +23,6 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
-source ~/.bashrc
 rvm get stable --auto-dotfiles
 rvm requirements
 
