@@ -23,6 +23,7 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
+source ~/.bashrc
 rvm get stable --auto-dotfiles
 rvm requirements
 
@@ -32,6 +33,7 @@ sudo gem update
 sudo gem cleanup
 
 ## pip
+python -m pip install --upgrade --force pip
 pip install --upgrade setuptools
 pip install --upgrade distribute
 pip install --upgrade pip
