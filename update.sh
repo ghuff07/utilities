@@ -10,6 +10,7 @@ git fetch origin
 git reset --hard origin/master
 brew update
 brew upgrade
+brew linkapps
 sudo brew cleanup
 
 ## relink brew kegs
