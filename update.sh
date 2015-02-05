@@ -47,5 +47,5 @@ sudo pear upgrade-all
 
 ## finish
 diskutil repairPermissions /
-brew doctor
 rm ~/Library/Application\ Support/Dock/*.db; defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+brew doctor
