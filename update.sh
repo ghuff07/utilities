@@ -11,6 +11,7 @@ git reset --hard origin/master
 brew update
 brew cask update
 brew upgrade
+for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
 brew linkapps
 sudo brew cleanup
 sudo brew cask cleanup
