@@ -17,6 +17,7 @@ sudo brew cleanup
 sudo brew cask cleanup
 
 ## relink brew kegs
+brew prune
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 
 ## npm
