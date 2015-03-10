@@ -13,8 +13,8 @@ brew cask update
 brew upgrade
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
 brew linkapps
-sudo brew cleanup
-sudo brew cask cleanup
+brew cleanup
+brew cask cleanup
 
 ## relink brew kegs
 brew prune
@@ -22,8 +22,8 @@ brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwr
 
 ## npm
 npm install -g npm@latest
-sudo npm cache clean
-sudo npm update -g
+npm cache clean
+npm update -g
 sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
@@ -35,9 +35,10 @@ rvm cleanup all
 rvm repair all
 
 ## ruby gems
-sudo gem update --system
-sudo gem update
-sudo gem cleanup
+gem update --system
+gem update
+gem cleanup
+gem regenerate_binstubs
 
 ## pip
 python -m pip install --upgrade --force pip
@@ -47,8 +48,9 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
+pear clear-cache
 pear update-channels
-sudo pear upgrade-all
+pear upgrade
 
 ## finish
 diskutil repairPermissions /
