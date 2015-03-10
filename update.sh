@@ -52,6 +52,9 @@ pear clear-cache
 pear update-channels
 pear upgrade
 
+## go
+go get -u all
+
 ## finish
 diskutil repairPermissions /
 brew doctor
