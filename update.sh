@@ -29,16 +29,21 @@ sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 rvm fix-permissions
-rvm get stable --auto-dotfiles
+rvm get head --auto-dotfiles
 rvm requirements
+rvm rubygems latest
+rvm all do gem update --system
+rvm all do gem update
+rvm all do gem cleanup
+rvm all do gem regenerate_binstubs
 rvm cleanup all
 rvm repair all
 
 ## ruby gems
-gem update --system
-gem update
-gem cleanup
-gem regenerate_binstubs
+sudo gem update --system
+sudo gem update
+sudo gem cleanup
+sudo gem regenerate_binstubs
 
 ## pip
 python -m pip install --upgrade --force pip
