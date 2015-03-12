@@ -32,18 +32,18 @@ rvm fix-permissions
 rvm get head --auto-dotfiles
 rvm requirements
 rvm rubygems latest
-rvm all do gem update --system
-rvm all do gem update
-rvm all do gem cleanup
-rvm all do gem regenerate_binstubs
+rvm all do sudo gem update --system
+rvm all do sudo gem update
+rvm all do sudo gem cleanup
+rvm all do sudo gem regenerate_binstubs
 rvm cleanup all
 rvm repair all
 
 ## ruby gems
-sudo gem update --system
-sudo gem update
-sudo gem cleanup
-sudo gem regenerate_binstubs
+#sudo gem update --system
+#sudo gem update
+#sudo gem cleanup
+#sudo gem regenerate_binstubs
 
 ## pip
 python -m pip install --upgrade --force pip
