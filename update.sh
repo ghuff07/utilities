@@ -44,6 +44,7 @@ rvm repair all
 #sudo gem update
 #sudo gem cleanup
 #sudo gem regenerate_binstubs
+bundle-audit update
 
 ## pip
 python -m pip install --upgrade --force pip
