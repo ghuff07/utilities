@@ -36,8 +36,8 @@ rvm all do sudo gem update --system
 rvm all do sudo gem update
 rvm all do sudo gem cleanup
 rvm all do sudo gem regenerate_binstubs
-rvm cleanup all
-rvm repair all
+sudo rvm cleanup all
+sudo rvm repair all
 
 ## ruby gems
 #sudo gem update --system
