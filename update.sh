@@ -36,9 +36,8 @@ rvm all do sudo gem update --system
 rvm all do sudo gem update
 rvm all do sudo gem cleanup
 rvm all do sudo gem regenerate_binstubs
-rvm get head --auto-dotfiles
-sudo rvm cleanup all
-sudo rvm repair all
+rvm cleanup all
+rvm repair all
 
 ## ruby gems
 #sudo gem update --system
