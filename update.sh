@@ -17,8 +17,8 @@ brew cleanup
 brew cask cleanup
 
 ## relink brew kegs
-brew prune
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
+brew prune
 
 ## npm
 npm install -g npm@latest
@@ -40,10 +40,6 @@ rvm cleanup all
 rvm repair all
 
 ## ruby gems
-#sudo gem update --system
-#sudo gem update
-#sudo gem cleanup
-#sudo gem regenerate_binstubs
 bundle-audit update
 
 ## pip
