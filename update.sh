@@ -32,7 +32,7 @@ sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 rvm fix-permissions
-rvm get head --auto-dotfiles
+rvm get stable --auto-dotfiles
 rvm requirements
 rvm rubygems latest
 rvm all do sudo gem update --system
