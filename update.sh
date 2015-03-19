@@ -20,6 +20,9 @@ brew cask cleanup
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 brew prune
 
+## nvm
+nvm clear-cache
+
 ## npm
 npm install -g npm@latest
 npm cache clean
