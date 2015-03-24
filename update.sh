@@ -58,6 +58,10 @@ pear upgrade
 ## go
 go get -u all
 
+## android
+android update adb
+android update sdk --no-ui
+
 ## finish
 diskutil repairPermissions /
 sudo find / -name ".DS_Store" -depth -exec rm {} \;
