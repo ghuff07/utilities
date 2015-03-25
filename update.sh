@@ -13,8 +13,8 @@ brew cask update
 brew upgrade
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
 brew linkapps
-brew cleanup
-brew cask cleanup
+sudo brew cleanup
+sudo brew cask cleanup
 
 ## relink brew kegs
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
