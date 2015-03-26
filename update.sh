@@ -53,7 +53,7 @@ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pi
 pear upgrade pear
 pear clear-cache
 pear update-channels
-pear upgrade
+pear upgrade --force
 
 ## go
 go get -u all
