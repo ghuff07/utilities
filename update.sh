@@ -60,7 +60,7 @@ go get -u all
 
 ## android
 android update adb
-android update sdk --no-ui
+# android update sdk --no-ui
 
 ## finish
 diskutil repairPermissions /
