@@ -50,10 +50,10 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
-pear upgrade pear
-pear clear-cache
-pear update-channels
-pear upgrade --force
+sudo pear upgrade pear
+sudo pear clear-cache
+sudo pear update-channels
+sudo pear upgrade
 
 ## go
 go get -u all
