@@ -60,12 +60,11 @@ go get -u all
 
 ## android
 android update adb
-android update sdk --no-ui
 
 ## msf
-rvm use ruby-2.1.5@metasploit-framework
-/usr/local/share/metasploit-framework/msfupdate
-rvm use default
+#rvm use ruby-2.1.5@metasploit-framework
+#/usr/local/share/metasploit-framework/msfupdate
+#rvm use default
 
 ## finish
 diskutil repairPermissions /
