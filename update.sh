@@ -29,7 +29,7 @@ sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 rvm fix-permissions
-rvm get head
+rvm get stable
 rvm requirements
 rvm rubygems latest
 rvm all do sudo gem update --system
