@@ -71,3 +71,4 @@ diskutil repairPermissions /
 sudo find / -name ".DS_Store" -depth -exec rm {} \;
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
 brew doctor
+brew cask doctor
