@@ -56,6 +56,7 @@ sudo pear update-channels
 sudo pear upgrade
 
 ## go
+go get -u github.com/nsf/gocode
 go get -u all
 
 ## android
