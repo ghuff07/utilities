@@ -8,7 +8,7 @@ sudo softwareupdate -i -a
 cd "$(brew --prefix)"
 git fetch origin
 git reset --hard origin/master
-brew update
+brew update --all
 brew cask update
 brew upgrade
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
