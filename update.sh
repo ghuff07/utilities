@@ -35,6 +35,7 @@ rvm rubygems latest
 rvm all do sudo gem update --system
 rvm all do sudo gem update
 rvm all do sudo gem cleanup
+rvm all do sudo gem pristine --all
 rvm all do sudo gem regenerate_binstubs
 rvm cleanup all
 rvm repair all
