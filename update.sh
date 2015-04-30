@@ -28,10 +28,10 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
-rvm all do rvm fix-permissions
-rvm all do get stable
-rvm all do requirements
-rvm all do rubygems latest
+rvm fix-permissions
+rvm get stable
+rvm requirements
+rvm rubygems latest
 #rvm all do rvm docs generate
 rvm all do sudo gem update --system
 rvm all do sudo gem update
