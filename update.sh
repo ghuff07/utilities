@@ -53,6 +53,14 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
+rm /usr/local/etc/php/5.6/pear.conf
+sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.9/lib/php
+pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
+pear config-set auto_discover 1
+sudo pear channel-discover pear.phpmd.org
+sudo pear channel-discover pear.pdepend.org
+sudo pear install --alldeps phpmd/PHP_PMD
+sudo pear install PHP_CodeSniffer
 sudo pear upgrade pear
 sudo pear clear-cache
 sudo pear update-channels
