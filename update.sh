@@ -32,7 +32,6 @@ rvm fix-permissions
 rvm get stable
 rvm requirements
 rvm rubygems latest
-#rvm all do rvm docs generate
 rvm all do sudo gem update --system
 rvm all do sudo gem update
 rvm all do sudo gem cleanup
@@ -56,7 +55,7 @@ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pi
 rm /usr/local/etc/php/5.6/pear.conf
 sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.9/lib/php
 pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
-pear config-set auto_discover 1
+sudo pear config-set auto_discover 1
 sudo pear channel-discover pear.phpmd.org
 sudo pear channel-discover pear.pdepend.org
 sudo pear install --alldeps phpmd/PHP_PMD
@@ -68,14 +67,13 @@ sudo pear upgrade
 
 ## go
 go get -u github.com/nsf/gocode
+go get -u github.com/mtesauro/jerry-curl
 go get -u all
 
 ## android
 android update adb
 
 ## finish
-diskutil repairPermissions /
-sudo find / -name ".DS_Store" -depth -exec rm {} \;
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
 brew cask doctor
 brew doctor
