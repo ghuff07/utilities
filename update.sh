@@ -56,18 +56,12 @@ rm /usr/local/etc/php/5.6/pear.conf
 sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.9/lib/php
 pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
 sudo pear config-set auto_discover 1
-sudo pear channel-discover pear.phpmd.org
-sudo pear channel-discover pear.pdepend.org
-sudo pear install --alldeps phpmd/PHP_PMD
-sudo pear install PHP_CodeSniffer
 sudo pear upgrade pear
 sudo pear clear-cache
 sudo pear update-channels
 sudo pear upgrade
 
 ## go
-go get -u github.com/nsf/gocode
-go get -u github.com/mtesauro/jerry-curl
 go get -u all
 
 ## android
