@@ -39,6 +39,7 @@ npm install -g cordova
 npm install -g csslint
 npm install -g david
 npm install -g express
+npm install -g express-generator
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g jshint
