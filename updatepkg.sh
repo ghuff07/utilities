@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo -v
 
 # Load RVM into a shell session *as a function*
@@ -51,12 +52,14 @@ npm install -g retire
 npm install -g mozilla/scanjs
 npm install -g yo
 
+# Update go packages
+go get -u github.com/nsf/gocode
+go get -u github.com/mtesauro/jerry-curl
+
 # Update pear packages
 sudo pear channel-discover pear.phpmd.org
 sudo pear channel-discover pear.pdepend.org
 sudo pear install --alldeps phpmd/PHP_PMD
 sudo pear install PHP_CodeSniffer
-
-# Update go packages
-go get -u github.com/nsf/gocode
-go get -u github.com/mtesauro/jerry-curl
+sudo pear upgrade --force pear/Structures_Graph
+sudo pear upgrade --force pear/XML_Util

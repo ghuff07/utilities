@@ -53,7 +53,7 @@ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pi
 
 ## pear
 rm /usr/local/etc/php/5.6/pear.conf
-sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.9/lib/php
+sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.10/lib/php
 pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
 sudo pear config-set auto_discover 1
 sudo pear upgrade pear
