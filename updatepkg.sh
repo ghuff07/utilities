@@ -49,7 +49,7 @@ npm install -g nodemon
 npm install -g nsp
 npm install -g phonegap
 npm install -g retire
-npm install -g mozilla/scanjs
+npm install -g secscan
 npm install -g yo
 
 # Update go packages

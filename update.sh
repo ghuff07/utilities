@@ -23,7 +23,7 @@ brew prune
 ## npm
 npm install -g npm@latest
 npm cache clean
-npm update -g
+npm update -g --depth 9999
 sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
