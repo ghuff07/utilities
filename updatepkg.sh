@@ -18,6 +18,8 @@ gem install gitrob
 gem install rails
 gem install rubocop
 gem install ruby-advisory-db-check
+gem install tlspretense
+rvm use default
 
 # Update gem packages from ruby 2.1.5
 rvm use ruby-2.1.5
