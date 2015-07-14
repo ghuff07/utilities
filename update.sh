@@ -28,7 +28,7 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
-rvm fix-permissions
+#rvm fix-permissions
 rvm get stable
 rvm requirements
 rvm rubygems latest
