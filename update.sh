@@ -23,13 +23,13 @@ brew prune
 ## npm
 npm install -g npm@latest
 npm cache clean
-npm update -g --depth 9999
+npm update -g
 sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 rvm fix-permissions
-rvm get head
+rvm get stable
 rvm requirements
 rvm rubygems latest
 rvm all do sudo gem update --system
@@ -52,9 +52,12 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
-rm /usr/local/etc/php/5.6/pear.conf
-sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.10/lib/php
-pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
+php --version | head -n1 | cut -d \  -f 2 | cut -c1-3 | xargs -I version sh -c "rm /usr/local/etc/php/version/pear.conf"
+#rm /usr/local/etc/php/5.6/pear.conf
+php --version | head -n1 | cut -d \  -f 2 | xargs -I version sh -c "sudo chmod -R ug+w /usr/local/Cellar/php56/version/lib/php"
+#sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.10/lib/php
+php --version | head -n1 | cut -d \  -f 2 | cut -c1-3 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
+#pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
 sudo pear config-set auto_discover 1
 sudo pear upgrade pear
 sudo pear clear-cache
