@@ -59,9 +59,12 @@ go get -u github.com/nsf/gocode
 go get -u github.com/mtesauro/jerry-curl
 
 # Update pear packages
+brew link --force openssl
 sudo pear channel-discover pear.phpmd.org
 sudo pear channel-discover pear.pdepend.org
 sudo pear install --alldeps phpmd/PHP_PMD
-sudo pear install PHP_CodeSniffer
+sudo pear install --alldeps PHP_CodeSniffer
 sudo pear upgrade --force pear/Structures_Graph
 sudo pear upgrade --force pear/XML_Util
+sudo pear upgrade --force pear/Console_GetoptPlus
+brew unlink openssl

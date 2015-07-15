@@ -29,15 +29,15 @@ sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
 #rvm fix-permissions
-rvm get stable
+rvm get head
 rvm requirements
 rvm rubygems latest
-rvm all do sudo gem update --system
-rvm all do sudo gem update
-rvm all do sudo gem cleanup
-rvm all do sudo gem rdoc --all
-rvm all do sudo gem pristine --all
-rvm all do sudo gem regenerate_binstubs
+rvm all do gem update --system
+rvm all do gem update
+rvm all do gem cleanup
+rvm all do gem rdoc --all
+rvm all do gem pristine --all
+rvm all do gem regenerate_binstubs
 rvm cleanup all
 rvm repair all
 
@@ -52,17 +52,16 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
-php --version | head -n1 | cut -d \  -f 2 | cut -c1-3 | xargs -I version sh -c "rm /usr/local/etc/php/version/pear.conf"
-#rm /usr/local/etc/php/5.6/pear.conf
-php --version | head -n1 | cut -d \  -f 2 | xargs -I version sh -c "sudo chmod -R ug+w /usr/local/Cellar/php56/version/lib/php"
-#sudo chmod -R ug+w /usr/local/Cellar/php56/5.6.10/lib/php
-php --version | head -n1 | cut -d \  -f 2 | cut -c1-3 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
-#pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
+brew link --force openssl
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "rm /usr/local/etc/php/version/pear.conf"
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "sudo chmod -R ug+w path/lib/php"
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
 sudo pear config-set auto_discover 1
 sudo pear upgrade pear
 sudo pear clear-cache
 sudo pear update-channels
 sudo pear upgrade
+brew unlink openssl
 
 ## go
 go get -u all
