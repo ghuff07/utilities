@@ -8,6 +8,6 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-rvm use ruby-2.1.5@metasploit-framework
+rvm use ruby-2.1.6@metasploit-framework
 /usr/local/share/metasploit-framework/msfupdate
 rvm use default

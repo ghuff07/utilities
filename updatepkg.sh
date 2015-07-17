@@ -10,18 +10,29 @@ fi
 
 # Update gem packages from ruby
 rvm use default
+gem install appium_console
 gem install brakeman
 gem install bundler-audit
 gem install compass
+gem install cucumber
 gem install dawnscanner
+gem install flaky
+gem install gauntlt
 gem install gitrob
+gem install license_finder
 gem install rails
+gem install rails-audit
+gem install rest-client
+gem install rspec
+gem install rspec-expectations
 gem install rubocop
 gem install ruby-advisory-db-check
+gem install selenium-webdriver
+gem install tarantula
 gem install tlspretense
 rvm use default
 
-# Update gem packages from ruby 2.1.5
+# Update gem packages from ruby 2.1.X
 rvm use ruby-2.1.6
 gem install idb
 rvm use default
@@ -35,6 +46,7 @@ rvm use default
 
 # Update npm packages
 npm install -g angular
+npm install -g appium
 npm install -g bower
 npm install -g coffee-script
 npm install -g coffeelint
@@ -43,6 +55,7 @@ npm install -g csslint
 npm install -g david
 npm install -g express
 npm install -g express-generator
+npm install -g grunt
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g jshint
@@ -52,6 +65,8 @@ npm install -g nsp
 npm install -g phonegap
 npm install -g retire
 npm install -g secscan
+npm install -g selenium-standalone
+npm install -g wd
 npm install -g yo
 
 # Update go packages
