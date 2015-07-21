@@ -28,14 +28,12 @@ sudo chown -R "$(whoami)" ~/.npm
 sudo chown -R "$(whoami)" /usr/local
 
 ## rvm
-#rvm fix-permissions
 rvm get head
 rvm requirements
 rvm rubygems latest
 rvm all do gem update --system
 rvm all do gem update
 rvm all do gem cleanup
-rvm all do gem rdoc --all --overwrite
 rvm all do gem pristine --all
 rvm all do gem regenerate_binstubs
 rvm cleanup all
@@ -72,6 +70,7 @@ android update adb
 ## finish
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
 jenv doctor
-jenv exec appium-doctor
+yo doctor
+appium-doctor
 brew cask doctor
 brew doctor
