@@ -13,6 +13,8 @@ rvm use default
 gem install appium_console
 gem install brakeman
 gem install bundler-audit
+gem install calabash-android
+gem install calabash-cucumber
 gem install compass
 gem install cucumber
 gem install dawnscanner
@@ -53,6 +55,7 @@ npm install -g coffeelint
 npm install -g cordova
 npm install -g csslint
 npm install -g david
+npm install -g dragula
 npm install -g express
 npm install -g express-generator
 npm install -g grunt
