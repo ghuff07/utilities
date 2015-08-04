@@ -34,8 +34,6 @@ rvm rubygems latest
 rvm all do gem update --system
 rvm all do gem update
 rvm all do gem cleanup
-rvm all do gem pristine --all
-rvm all do gem regenerate_binstubs
 rvm cleanup all
 rvm repair all
 
