@@ -48,16 +48,14 @@ pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
-brew link --force openssl
-brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "rm /usr/local/etc/php/version/pear.conf"
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo rm /usr/local/etc/php/version/pear.conf"
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "sudo chmod -R ug+w path/lib/php"
-brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo pear config-set php_ini /usr/local/etc/php/version/php.ini system"
 sudo pear config-set auto_discover 1
 sudo pear upgrade pear
 sudo pear clear-cache
 sudo pear update-channels
 sudo pear upgrade
-brew unlink openssl
 
 ## go
 go get -u all
