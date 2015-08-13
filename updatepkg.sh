@@ -40,7 +40,7 @@ gem install idb
 rvm use default
 
 # Update gem packages from jruby
-rvm use jruby-1.7.20
+rvm use jruby-1.7.21
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
