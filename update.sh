@@ -37,9 +37,6 @@ rvm all do gem cleanup
 rvm cleanup all
 rvm repair all
 
-## ruby gems
-bundle-audit update
-
 ## pip
 python -m pip install --upgrade --force pip
 pip install --upgrade setuptools
@@ -62,6 +59,12 @@ go get -u all
 
 ## android
 android update adb
+
+## security tools
+airodump-ng-oui-update
+bundle-audit update
+nikto -update
+sqlmap --update
 
 ## finish
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
