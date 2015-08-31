@@ -42,7 +42,7 @@ python -m pip install --upgrade --force pip
 pip install --upgrade setuptools
 pip install --upgrade distribute
 pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "pip install --upgrade --allow-external package --allow-unverified package package"
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "sudo -H pip install --upgrade --allow-external package --allow-unverified package package"
 
 ## pear
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo rm /usr/local/etc/php/version/pear.conf"
