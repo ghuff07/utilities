@@ -35,12 +35,12 @@ gem install tlspretense
 rvm use default
 
 # Update gem packages from ruby 2.1.X
-rvm use ruby-2.1.6
+rvm use ruby-2.1.7
 gem install idb
 rvm use default
 
 # Update gem packages from jruby
-rvm use jruby-1.7.21
+rvm use jruby-1.7.22
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
@@ -72,15 +72,20 @@ npm install -g selenium-standalone
 npm install -g wd
 npm install -g yo
 
+#Update pip packages
+pip install Django
+
 # Update go packages
 go get -u github.com/nsf/gocode
 go get -u github.com/mtesauro/jerry-curl
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install --update
 
 # Update pear packages
 sudo pear channel-discover pear.phpmd.org
 sudo pear channel-discover pear.pdepend.org
 sudo pear install --force --alldeps phpmd/PHP_PMD
-sudo pear install --force --alldeps PHP_CodeSniffer
+sudo pear install --force PHP_CodeSniffer
 sudo pear upgrade --force pear/Structures_Graph
 sudo pear upgrade --force pear/XML_Util
 sudo pear upgrade --force pear/Console_GetoptPlus

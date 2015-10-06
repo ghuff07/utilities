@@ -61,7 +61,6 @@ go get -u all
 android update adb
 
 ## security tools
-airodump-ng-oui-update
 bundle-audit update
 nikto -update
 sqlmap --update
