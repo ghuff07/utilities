@@ -63,6 +63,7 @@ npm install -g grunt-cli
 npm install -g gulp
 npm install -g jshint
 npm install -g less
+npm install -g license-checker
 npm install -g nodemon
 npm install -g nsp
 npm install -g phonegap
