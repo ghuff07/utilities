@@ -1,8 +1,10 @@
 #!/bin/bash -v
 sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ## OS X
 sudo softwareupdate -i -a
+xcode-select --install
 
 ## brew
 cd "$(brew --prefix)"
