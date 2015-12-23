@@ -21,6 +21,7 @@ gem install dawnscanner
 gem install flaky
 gem install gauntlt
 gem install gitrob
+gem install idb
 gem install license_finder
 gem install rails
 gem install rails-audit
@@ -34,13 +35,8 @@ gem install tarantula
 gem install tlspretense
 rvm use default
 
-# Update gem packages from ruby 2.1.X
-rvm use ruby-2.1.7
-gem install idb
-rvm use default
-
 # Update gem packages from jruby
-rvm use jruby-1.7.19
+rvm use jruby-1.7.22
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
