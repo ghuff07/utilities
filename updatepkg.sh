@@ -13,10 +13,12 @@ fi
 # Update gem packages for ruby
 rvm use default
 gem install appium_console
+gem install appium_lib
 gem install brakeman
 gem install bundler-audit
 gem install calabash-android
 gem install calabash-cucumber
+gem install cocoapods
 gem install compass
 gem install cucumber
 gem install dawnscanner
@@ -93,6 +95,9 @@ pip install boto
 pip install awscli
 pip install mrjob
 pip install s3cmd
+pip install Appium-Python-Client
+pip install robotframework
+pip install robotframework-appiumlibrary
 
 # Update pip3 packages
 pip3 install virtualenv
@@ -114,6 +119,7 @@ pip3 install sqlalchemy
 pip3 install mysqlclient
 pip3 install boto
 pip3 install awscli
+pip3 install Appium-Python-Client
 
 # Update go packages
 go get -u github.com/nsf/gocode

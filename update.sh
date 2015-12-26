@@ -71,6 +71,10 @@ android update adb
 # heroku
 heroku update
 
+# java
+jenv rehash
+jenv enable-plugin export
+
 # security tools
 bundle-audit update
 nikto -update
@@ -78,7 +82,6 @@ sqlmap --update
 
 # finish
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
-jenv rehash
 jenv doctor
 yo doctor
 appium-doctor
