@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+sudo chown -R $(whoami):admin /usr/local
 
 # Load RVM into a shell session *as a function*
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
@@ -9,7 +10,7 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-# Update gem packages from ruby
+# Update gem packages for ruby
 rvm use default
 gem install appium_console
 gem install brakeman
@@ -36,7 +37,7 @@ gem install tarantula
 gem install tlspretense
 rvm use default
 
-# Update gem packages from jruby
+# Update gem packages for jruby
 rvm use jruby-1.7.22
 jruby -S gem install buby
 jruby -S gem install nokogiri
@@ -71,7 +72,48 @@ npm install -g wd
 npm install -g yo
 
 #Update pip packages
+pip install virtualenv
+pip install virtualenvwrapper
 pip install Django
+pip install numpy
+pip install scipy
+pip install matplotlib
+pip install pandas
+pip install sympy
+pip install nose
+pip install unittest2
+pip install seaborn
+pip install scikit-learn
+pip install "ipython[all]"
+pip install bokeh
+pip install Flask
+pip install sqlalchemy
+pip install mysql-python
+pip install boto
+pip install awscli
+pip install mrjob
+pip install s3cmd
+
+# Update pip3 packages
+pip3 install virtualenv
+pip3 install virtualenvwrapper
+pip3 install Django
+pip3 install numpy
+pip3 install scipy
+pip3 install matplotlib
+pip3 install pandas
+pip3 install sympy
+pip3 install nose
+pip3 install unittest2
+pip3 install seaborn
+pip3 install scikit-learn
+pip3 install "ipython[all]"
+pip3 install bokeh
+pip3 install Flask
+pip3 install sqlalchemy
+pip3 install mysqlclient
+pip3 install boto
+pip3 install awscli
 
 # Update go packages
 go get -u github.com/nsf/gocode
