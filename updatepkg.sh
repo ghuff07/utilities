@@ -40,7 +40,7 @@ gem install tlspretense
 rvm use default
 
 # Update gem packages for jruby
-rvm use jruby-1.7.22
+rvm use jruby
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
@@ -58,6 +58,9 @@ npm install -g david
 npm install -g dragula
 npm install -g express
 npm install -g express-generator
+npm install -g generator-angular
+npm install -g generator-karma
+npm install -g generator-webapp
 npm install -g grunt
 npm install -g grunt-cli
 npm install -g gulp
