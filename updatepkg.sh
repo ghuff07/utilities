@@ -126,6 +126,7 @@ pip install Appium-Python-Client
 pip install robotframework
 pip install robotframework-appiumlibrary
 pip install jasmine
+pip install ansible
 
 # Update pip3 packages
 pip3 install virtualenv
@@ -149,6 +150,7 @@ pip3 install boto
 pip3 install awscli
 pip3 install Appium-Python-Client
 pip3 install jasmine
+pip3 install ansible
 
 # Update go packages
 go get -u github.com/nsf/gocode
