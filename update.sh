@@ -1,7 +1,7 @@
 #!/bin/bash -v
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-sudo chown -R $(whoami):admin /usr/local
+sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local && sudo chown -R $(whoami):staff /Users/$(whoami)
 
 # OS X
 sudo softwareupdate -ia
@@ -16,8 +16,8 @@ brew cask update
 brew upgrade --all
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
 brew linkapps
-sudo brew cleanup
-sudo brew cask cleanup
+sudo brew cleanup --force
+sudo brew cask cleanup --force
 
 # relink brew kegs
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
@@ -27,8 +27,10 @@ brew prune
 npm install -g npm@latest
 npm cache clean
 npm update -g
-sudo chown -R "$(whoami)" ~/.npm
-sudo chown -R "$(whoami)" /usr/local
+
+# bower
+bower cache clean
+bower update
 
 # rvm
 rvm get head

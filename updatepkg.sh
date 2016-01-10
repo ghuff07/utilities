@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-sudo chown -R $(whoami):admin /usr/local
+sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local && sudo chown -R $(whoami):staff /Users/$(whoami)
 
 # Load RVM into a shell session *as a function*
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
@@ -14,10 +14,12 @@ fi
 rvm use default
 gem install appium_console
 gem install appium_lib
+gem install arachni
 gem install brakeman
 gem install bundler-audit
 gem install calabash-android
 gem install calabash-cucumber
+gem install capybara-webkit
 gem install cocoapods
 gem install compass
 gem install cucumber
@@ -26,7 +28,9 @@ gem install flaky
 gem install gauntlt
 gem install gitrob
 gem install idb
+gem install jasmine
 gem install license_finder
+gem install nokogiri
 gem install rails
 gem install rails-audit
 gem install rest-client
@@ -34,8 +38,10 @@ gem install rspec
 gem install rspec-expectations
 gem install rubocop
 gem install ruby-advisory-db-check
+gem install savon
 gem install selenium-webdriver
 gem install tarantula
+gem install therubyracer
 gem install tlspretense
 rvm use default
 
@@ -49,7 +55,9 @@ rvm use default
 # Update npm packages
 npm install -g angular
 npm install -g appium
+npm install -g appium-doctor
 npm install -g bower
+npm install -g browserify
 npm install -g coffee-script
 npm install -g coffeelint
 npm install -g cordova
@@ -58,25 +66,41 @@ npm install -g david
 npm install -g dragula
 npm install -g express
 npm install -g express-generator
+npm install -g forever
 npm install -g generator-angular
 npm install -g generator-karma
 npm install -g generator-webapp
 npm install -g grunt
 npm install -g grunt-cli
 npm install -g gulp
+npm install -g jasmine
 npm install -g jshint
+npm install -g karma
 npm install -g less
 npm install -g license-checker
 npm install -g nodemon
 npm install -g nsp
 npm install -g phonegap
+npm install -g pm2
 npm install -g retire
 npm install -g secscan
 npm install -g selenium-standalone
+npm install -g statsd
 npm install -g wd
 npm install -g yo
 
-#Update pip packages
+# Update bower packages
+bower install angular --force-latest
+bower install bootstrap --force-latest
+bower install bootstrap-material-design --force-latest
+bower install bootstrap-sass --force-latest
+bower install jasmine-core --force-latest
+bower install jquery --force-latest
+bower install jquery-mobile --force-latest
+bower install jquery-ui --force-latest
+bower install qunit --force-latest
+
+# Update pip packages
 pip install virtualenv
 pip install virtualenvwrapper
 pip install Django
@@ -101,6 +125,7 @@ pip install s3cmd
 pip install Appium-Python-Client
 pip install robotframework
 pip install robotframework-appiumlibrary
+pip install jasmine
 
 # Update pip3 packages
 pip3 install virtualenv
@@ -123,6 +148,7 @@ pip3 install mysqlclient
 pip3 install boto
 pip3 install awscli
 pip3 install Appium-Python-Client
+pip3 install jasmine
 
 # Update go packages
 go get -u github.com/nsf/gocode
@@ -134,7 +160,7 @@ gometalinter --install --update
 sudo pear channel-discover pear.phpmd.org
 sudo pear channel-discover pear.pdepend.org
 sudo pear install --force --alldeps phpmd/PHP_PMD
-sudo pear install --force PHP_CodeSniffer
-sudo pear upgrade --force pear/Structures_Graph
-sudo pear upgrade --force pear/XML_Util
-sudo pear upgrade --force pear/Console_GetoptPlus
+sudo pear install --force --alldeps PHP_CodeSniffer
+sudo pear upgrade --force --alldeps pear/Structures_Graph
+sudo pear upgrade --force --alldeps pear/XML_Util
+sudo pear upgrade --force --alldeps pear/Console_GetoptPlus
