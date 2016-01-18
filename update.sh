@@ -16,8 +16,8 @@ brew cask update
 brew upgrade --all
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
 brew linkapps
-sudo brew cleanup --force
-sudo brew cask cleanup --force
+brew cleanup --force
+brew cask cleanup --force
 
 # relink brew kegs
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
@@ -43,15 +43,13 @@ rvm cleanup all
 rvm repair all
 
 # pip
-pip install --upgrade setuptools
+pip install --upgrade pip setuptools
 pip install --upgrade distribute
-pip install --upgrade pip
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "sudo -H pip install --upgrade --allow-external package --allow-unverified package package"
 
 # pip3
-pip3 install --upgrade setuptools
+pip3 install --upgrade pip setuptools
 pip3 install --upgrade distribute
-pip3 install --upgrade pip
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "sudo -H pip3 install --upgrade --allow-external package --allow-unverified package package"
 
 # pear

@@ -30,7 +30,7 @@ gem install gitrob
 gem install idb
 gem install jasmine
 gem install license_finder
-gem install nokogiri
+gem install nokogiri -- --with-xslt-dir=/usr/local/opt/libxslt
 gem install rails
 gem install rails-audit
 gem install rest-client
@@ -127,6 +127,7 @@ pip install robotframework
 pip install robotframework-appiumlibrary
 pip install jasmine
 pip install ansible
+pip install capstone
 
 # Update pip3 packages
 pip3 install virtualenv
@@ -151,6 +152,7 @@ pip3 install awscli
 pip3 install Appium-Python-Client
 pip3 install jasmine
 pip3 install ansible
+pip3 install capstone
 
 # Update go packages
 go get -u github.com/nsf/gocode
