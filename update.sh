@@ -45,22 +45,22 @@ rvm repair all
 # pip
 pip install --upgrade pip setuptools
 pip install --upgrade distribute
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "sudo -H pip install --upgrade --allow-external package --allow-unverified package package"
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # pip3
 pip3 install --upgrade pip setuptools
 pip3 install --upgrade distribute
-pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -I package sh -c "sudo -H pip3 install --upgrade --allow-external package --allow-unverified package package"
+pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # pear
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo rm /usr/local/etc/php/version/pear.conf"
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "sudo chmod -R ug+w path/lib/php"
-brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo pear config-set php_ini /usr/local/etc/php/version/php.ini system"
-sudo pear config-set auto_discover 1
-sudo pear upgrade pear
-sudo pear clear-cache
-sudo pear update-channels
-sudo pear upgrade
+brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
+pear config-set auto_discover 1
+pear upgrade pear
+pear clear-cache
+pear update-channels
+pear upgrade
 
 # go
 go get -u all
