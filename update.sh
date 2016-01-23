@@ -7,7 +7,7 @@ sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local
 sudo softwareupdate -ia
 xcode-select --install
 
-# brew
+# homebrew
 cd "$(brew --prefix)"
 git fetch origin
 git reset --hard origin/master
@@ -75,14 +75,22 @@ heroku update
 jenv rehash
 jenv enable-plugin export
 
+# quicklook
+qlmanage -r cache
+qlmanage -r
+
 # security tools
 bundle-audit update
 nikto -update
 sqlmap --update
 
-# finish
+# reset launchpad
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
+
+# unhide /opt folder
 sudo chflags nohidden /opt
+
+# various checkups
 jenv doctor
 yo doctor
 appium-doctor
