@@ -18,6 +18,7 @@ for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || 
 brew linkapps
 brew cleanup --force
 brew cask cleanup --force
+brew services cleanup
 
 # relink brew kegs
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
