@@ -37,6 +37,7 @@ gem install rest-client
 gem install rspec
 gem install rspec-expectations
 gem install rubocop
+gem install rubocop-cask
 gem install ruby-advisory-db-check
 gem install savon
 gem install selenium-webdriver
