@@ -75,6 +75,9 @@ heroku update
 jenv rehash
 jenv enable-plugin export
 
+# python
+pyenv rehash
+
 # quicklook
 qlmanage -r cache
 qlmanage -r
@@ -91,6 +94,7 @@ rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.
 sudo chflags nohidden /opt
 
 # various checkups
+chef verify
 jenv doctor
 yo doctor
 appium-doctor
