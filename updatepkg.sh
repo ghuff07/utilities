@@ -57,6 +57,9 @@ rvm use default
 npm install -g angular
 npm install -g appium
 npm install -g appium-doctor
+npm install -g babel
+npm install -g babel-eslint
+npm install -g bootlint
 npm install -g bootstrap
 npm install -g bower
 npm install -g browserify
@@ -65,6 +68,9 @@ npm install -g cordova
 npm install -g csslint
 npm install -g david
 npm install -g dragula
+npm install -g eslint
+npm install -g eslint-plugin-angular
+npm install -g eslint-plugin-react
 npm install -g express
 npm install -g express-generator
 npm install -g forever
@@ -73,21 +79,26 @@ npm install -g generator-karma
 npm install -g generator-webapp
 npm install -g grunt
 npm install -g grunt-cli
+npm install -g grunt-eslint
 npm install -g gulp
+npm install -g gulp-eslint
 npm install -g jasmine
-npm install -g jshint
+npm install -g jasmine-babel
 npm install -g karma
+npm install -g karma-eslint
 npm install -g less
 npm install -g license-checker
 npm install -g nodemon
 npm install -g nsp
 npm install -g phonegap
 npm install -g pm2
+npm install -g react
 npm install -g retire
 npm install -g secscan
 npm install -g selenium-standalone
 npm install -g statsd
 npm install -g wd
+npm install -g webpack
 npm install -g yo
 
 # Update bower packages
@@ -167,6 +178,7 @@ gometalinter --install --update
 # Update pear packages
 pear channel-discover pear.phpmd.org
 pear channel-discover pear.pdepend.org
+pear upgrade --force --alldeps pear/Console_GetoptPlus
+pear upgrade --force --alldeps pear/PHP_CodeSniffer
 pear upgrade --force --alldeps pear/Structures_Graph
 pear upgrade --force --alldeps pear/XML_Util
-pear upgrade --force --alldeps pear/Console_GetoptPlus

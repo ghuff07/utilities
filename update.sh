@@ -69,6 +69,9 @@ composer self-update
 # go
 go get -u all
 
+# anaconda
+conda update --all --yes conda
+
 # android
 android update adb
 
