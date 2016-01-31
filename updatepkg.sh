@@ -57,10 +57,10 @@ rvm use default
 npm install -g angular
 npm install -g appium
 npm install -g appium-doctor
+npm install -g bootstrap
 npm install -g bower
 npm install -g browserify
 npm install -g coffee-script
-npm install -g coffeelint
 npm install -g cordova
 npm install -g csslint
 npm install -g david
@@ -129,6 +129,8 @@ pip install robotframework-appiumlibrary
 pip install jasmine
 pip install ansible
 pip install capstone
+pip install pyflakes
+pip install pep8
 
 # Update pip3 packages
 pip3 install virtualenv
@@ -154,6 +156,8 @@ pip3 install Appium-Python-Client
 pip3 install jasmine
 pip3 install ansible
 pip3 install capstone
+pip3 install pyflakes
+pip3 install pep8
 
 # Update go packages
 go get -u github.com/nsf/gocode
@@ -162,10 +166,8 @@ go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update
 
 # Update pear packages
-sudo pear channel-discover pear.phpmd.org
-sudo pear channel-discover pear.pdepend.org
-sudo pear install --force --alldeps phpmd/PHP_PMD
-sudo pear install --force --alldeps PHP_CodeSniffer
-sudo pear upgrade --force --alldeps pear/Structures_Graph
-sudo pear upgrade --force --alldeps pear/XML_Util
-sudo pear upgrade --force --alldeps pear/Console_GetoptPlus
+pear channel-discover pear.phpmd.org
+pear channel-discover pear.pdepend.org
+pear upgrade --force --alldeps pear/Structures_Graph
+pear upgrade --force --alldeps pear/XML_Util
+pear upgrade --force --alldeps pear/Console_GetoptPlus
