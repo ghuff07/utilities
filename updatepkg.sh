@@ -178,6 +178,15 @@ go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update
 
 # Update pear packages
+php-version 5
+pear channel-discover pear.phpmd.org
+pear channel-discover pear.pdepend.org
+pear upgrade --force --alldeps pear/Console_GetoptPlus
+pear upgrade --force --alldeps pear/PHP_CodeSniffer
+pear upgrade --force --alldeps pear/Structures_Graph
+pear upgrade --force --alldeps pear/XML_Util
+
+php-version 7
 pear channel-discover pear.phpmd.org
 pear channel-discover pear.pdepend.org
 pear upgrade --force --alldeps pear/Console_GetoptPlus
