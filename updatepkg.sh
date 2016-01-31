@@ -30,7 +30,7 @@ gem install gitrob
 gem install idb
 gem install jasmine
 gem install license_finder
-gem install nokogiri -- --with-xslt-dir=/usr/local/opt/libxslt
+gem install nokogiri --with-xslt-dir=/usr/local/opt/libxslt
 gem install rails
 gem install rails-audit
 gem install rest-client
@@ -47,7 +47,7 @@ gem install tlspretense
 rvm use default
 
 # Update gem packages for jruby
-rvm use jruby
+rvm use jruby-9.0.5.0
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
@@ -131,6 +131,7 @@ pip install numpy
 pip install pandas
 pip install pep8
 pip install pyflakes
+pip install pyyaml
 pip install robotframework
 pip install robotframework-appiumlibrary
 pip install s3cmd
@@ -161,6 +162,7 @@ pip3 install numpy
 pip3 install pandas
 pip3 install pep8
 pip3 install pyflakes
+pip3 install pyyaml
 pip3 install scikit-learn
 pip3 install scipy
 pip3 install seaborn
