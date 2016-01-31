@@ -102,65 +102,64 @@ bower install jquery-ui --force-latest
 bower install qunit --force-latest
 
 # Update pip packages
-pip install virtualenv
-pip install virtualenvwrapper
-pip install Django
-pip install numpy
-pip install scipy
-pip install matplotlib
-pip install pandas
-pip install sympy
-pip install nose
-pip install unittest2
-pip install seaborn
-pip install scikit-learn
 pip install "ipython[all]"
-pip install bokeh
-pip install Flask
-pip install sqlalchemy
-pip install mysql-python
-pip install boto
-pip install awscli
-pip install mrjob
-pip install s3cmd
+pip install ansible
 pip install Appium-Python-Client
+pip install awscli
+pip install bokeh
+pip install boto
+pip install capstone
+pip install Django
+pip install Flask
+pip install jasmine
+pip install matplotlib
+pip install mrjob
+pip install mysql-python
+pip install nose
+pip install numpy
+pip install pandas
+pip install pep8
+pip install pyflakes
 pip install robotframework
 pip install robotframework-appiumlibrary
-pip install jasmine
-pip install ansible
-pip install capstone
-pip install pyflakes
-pip install pep8
+pip install s3cmd
+pip install scikit-learn
+pip install scipy
+pip install seaborn
+pip install sqlalchemy
+pip install sympy
+pip install unittest2
+pip install virtualenv
+pip install virtualenvwrapper
 
 # Update pip3 packages
+pip3 install "ipython[all]"
+pip3 install ansible
+pip3 install Appium-Python-Client
+pip3 install awscli
+pip3 install bokeh
+pip3 install boto
+pip3 install capstone
+pip3 install Django
+pip3 install Flask
+pip3 install jasmine
+pip3 install matplotlib
+pip3 install mysqlclient
+pip3 install nose
+pip3 install numpy
+pip3 install pandas
+pip3 install pep8
+pip3 install pyflakes
+pip3 install scikit-learn
+pip3 install scipy
+pip3 install seaborn
+pip3 install sqlalchemy
+pip3 install sympy
+pip3 install unittest2
 pip3 install virtualenv
 pip3 install virtualenvwrapper
-pip3 install Django
-pip3 install numpy
-pip3 install scipy
-pip3 install matplotlib
-pip3 install pandas
-pip3 install sympy
-pip3 install nose
-pip3 install unittest2
-pip3 install seaborn
-pip3 install scikit-learn
-pip3 install "ipython[all]"
-pip3 install bokeh
-pip3 install Flask
-pip3 install sqlalchemy
-pip3 install mysqlclient
-pip3 install boto
-pip3 install awscli
-pip3 install Appium-Python-Client
-pip3 install jasmine
-pip3 install ansible
-pip3 install capstone
-pip3 install pyflakes
-pip3 install pep8
 
 # Update go packages
-go get -u github.com/nsf/gocode
 go get -u github.com/mtesauro/jerry-curl
 go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update

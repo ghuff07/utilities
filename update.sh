@@ -63,6 +63,9 @@ pear clear-cache
 pear update-channels
 pear upgrade
 
+# composer
+composer self-update
+
 # go
 go get -u all
 
