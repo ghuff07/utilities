@@ -63,6 +63,7 @@ npm install -g bootlint
 npm install -g bootstrap
 npm install -g bower
 npm install -g browserify
+npm install -g chai
 npm install -g coffee-script
 npm install -g cordova
 npm install -g csslint
@@ -71,6 +72,7 @@ npm install -g dragula
 npm install -g eslint
 npm install -g eslint-plugin-angular
 npm install -g eslint-plugin-react
+npm install -g expect.js
 npm install -g express
 npm install -g express-generator
 npm install -g forever
@@ -88,11 +90,13 @@ npm install -g karma
 npm install -g karma-eslint
 npm install -g less
 npm install -g license-checker
+npm install -g mocha
 npm install -g nodemon
 npm install -g nsp
 npm install -g phonegap
 npm install -g pm2
 npm install -g react
+npm install -g request
 npm install -g retire
 npm install -g secscan
 npm install -g selenium-standalone
