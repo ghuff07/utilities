@@ -30,7 +30,7 @@ gem install gitrob
 gem install idb
 gem install jasmine
 gem install license_finder
-gem install nokogiri --with-xslt-dir=/usr/local/opt/libxslt
+gem install nokogiri
 gem install rails
 gem install rails-audit
 gem install rest-client
