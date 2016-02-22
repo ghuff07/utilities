@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local && sudo chown -R $(whoami):staff /Users/$(whoami)
@@ -35,6 +35,13 @@ npm update -g
 bower cache clean
 bower update
 
+# Load RVM into a shell session *as a function*
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+  source "$HOME/.rvm/scripts/rvm"
+else
+  printf "ERROR: An RVM installation was not found.\n"
+fi
+
 # rvm
 rvm get head
 rvm requirements
@@ -56,7 +63,7 @@ pip3 install --upgrade distribute
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # pear
-php-version 5
+source $(brew --prefix php-version)/php-version.sh && php-version 5
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo rm /usr/local/etc/php/version/pear.conf"
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "sudo chmod -R ug+w path/lib/php"
 brew info php56 | grep /usr/local/Cellar/php56 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
@@ -66,7 +73,7 @@ pear clear-cache
 pear update-channels
 pear upgrade
 
-php-version 7
+source $(brew --prefix php-version)/php-version.sh && php-version 7
 brew info php70 | grep /usr/local/Cellar/php70 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "sudo rm /usr/local/etc/php/version/pear.conf"
 brew info php70 | grep /usr/local/Cellar/php70 | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "sudo chmod -R ug+w path/lib/php"
 brew info php70 | grep /usr/local/Cellar/php70 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
@@ -89,6 +96,7 @@ android update adb
 heroku update
 
 # java
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 jenv rehash
 jenv enable-plugin export
 
