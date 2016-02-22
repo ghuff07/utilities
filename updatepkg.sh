@@ -125,8 +125,11 @@ pip install bokeh
 pip install boto
 pip install capstone
 pip install Django
+pip install django-markdown
 pip install Flask
+pip install hg-git
 pip install jasmine
+pip install markdown
 pip install matplotlib
 pip install mrjob
 pip install mysql-python
@@ -157,8 +160,11 @@ pip3 install bokeh
 pip3 install boto
 pip3 install capstone
 pip3 install Django
+pip3 install django-markdown
 pip3 install Flask
+pip3 install hg-git
 pip3 install jasmine
+pip3 install markdown
 pip3 install matplotlib
 pip3 install mysqlclient
 pip3 install nose
