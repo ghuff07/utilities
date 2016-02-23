@@ -48,6 +48,7 @@ rvm requirements
 rvm rubygems latest
 rvm all do gem update --system
 rvm all do gem update
+rvm all do gem regenerate_binstubs
 rvm all do gem cleanup
 rvm cleanup all
 rvm repair all

@@ -47,7 +47,7 @@ gem install tlspretense
 rvm use default
 
 # Update gem packages for jruby
-rvm use jruby-9.0.5.0
+rvm use jruby
 jruby -S gem install buby
 jruby -S gem install nokogiri
 jruby -S gem install savon
