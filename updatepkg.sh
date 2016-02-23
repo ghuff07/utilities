@@ -46,13 +46,6 @@ gem install therubyracer
 gem install tlspretense
 rvm use default
 
-# Update gem packages for jruby
-rvm use jruby
-jruby -S gem install buby
-jruby -S gem install nokogiri
-jruby -S gem install savon
-rvm use default
-
 # Update npm packages
 npm install -g angular
 npm install -g appium
