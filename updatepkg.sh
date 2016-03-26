@@ -26,6 +26,7 @@ gem install cucumber
 gem install dawnscanner
 gem install flaky
 gem install gauntlt
+gem install github-linguist
 gem install gitrob
 gem install idb
 gem install jasmine
