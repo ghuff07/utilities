@@ -177,6 +177,8 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 
 # Update go packages
+go get -u golang.org/x/text
+go get -u golang.org/x/crypto/ssh
 go get -u github.com/mtesauro/jerry-curl
 go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update
