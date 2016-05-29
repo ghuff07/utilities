@@ -6,3 +6,4 @@ sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local
 #brew cask list | xargs brew cask install --force
 #for c in `brew cask list`; do ! brew cask install --force $c; done
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "latest" || brew cask install --force $c; done
+brew cask cleanup --force

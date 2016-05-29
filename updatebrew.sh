@@ -8,3 +8,4 @@ for c in `brew list`; do ! brew info $c | grep "Build: " | sed -E 's/^.{6}//' | 
 for c in `brew list`; do ! brew info $c | grep "Optional: " | sed -E 's/^.{9}//' | tr "," "\n" | xargs brew install; done
 for c in `brew list`; do ! brew info $c | grep "Recommended: " | sed -E 's/^.{12}//' | tr "," "\n" | xargs brew install; done
 #brew list | xargs brew reinstall
+brew cleanup --force
