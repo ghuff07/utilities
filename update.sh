@@ -55,12 +55,10 @@ rvm repair all
 
 # pip
 pip install --upgrade pip setuptools
-pip install --upgrade distribute
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # pip3
 pip3 install --upgrade pip setuptools
-pip3 install --upgrade distribute
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # pear
