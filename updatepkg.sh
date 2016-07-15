@@ -41,6 +41,7 @@ gem install rubocop
 gem install rubocop-cask
 gem install ruby-advisory-db-check
 gem install savon
+gem install scss_lint
 gem install selenium-webdriver
 gem install tarantula
 gem install therubyracer
