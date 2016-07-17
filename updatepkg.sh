@@ -17,8 +17,7 @@ gem install appium_lib
 gem install arachni
 gem install brakeman
 gem install bundler-audit
-gem install calabash-android
-gem install calabash-cucumber
+gem install calabash
 gem install capybara-webkit
 gem install cocoapods
 gem install compass
