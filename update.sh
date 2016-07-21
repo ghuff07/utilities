@@ -64,11 +64,16 @@ brew info php70 | grep /usr/local/Cellar/php70 | head -n1 | cut -d \  -f 1 | xar
 brew info php70 | grep /usr/local/Cellar/php70 | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
 pear config-set auto_discover 1
 pear upgrade pear
+pear channel-discover pear.phpmd.org
+pear channel-discover pear.pdepend.org
+pear install --alldeps phpmd/PHP_PMD
+pear install PHP_CodeSniffer
 pear clear-cache
 pear update-channels
 pear upgrade
 
 # go
+gometalinter --install --update
 go get -u all
 
 # java
