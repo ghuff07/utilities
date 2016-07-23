@@ -22,6 +22,7 @@ brew update
 brew cask update
 brew upgrade --all
 for c in `brew cask list`; do ! brew cask info $c | grep -qF "Not installed" || brew cask install $c; done
+unset c
 brew linkapps
 brew cleanup --force
 brew cask cleanup --force
@@ -74,6 +75,15 @@ pear upgrade
 # golang / go update
 gometalinter --install --update
 go get -u all
+
+# android sdk update
+expect -c "
+set timeout -1;
+spawn android update sdk --no-ui
+expect {
+    \"Do you accept the license\" { exp_send \"y\r\"; exp_continue }
+    eof
+} "
 
 # security tool update
 bundle-audit update
