@@ -49,7 +49,6 @@ npm install -g stylus
 npm install -g yo
 
 # ruby / gem packages
-rvm use default
 gem install brakeman
 gem install bundler
 gem install bundler-audit
@@ -73,7 +72,6 @@ gem install rubocop
 gem install scss_lint
 gem install selenium-webdriver
 gem install tarantula
-rvm use default
 
 # php / pear packages
 pear channel-discover pear.phpmd.org
