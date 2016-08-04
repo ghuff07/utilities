@@ -90,7 +90,17 @@ expect {
 bundle-audit update
 
 # mackup
-mackup backup
+expect -c "
+set timeout -1;
+spawn mackup backup
+expect {
+    \"Are you sure that you want to replace it\" { exp_send \"Yes\r\"; exp_continue }
+    eof
+} "
+
+# quicklook
+qlmanage -r
+qlmanage -r cache
 
 # reset launchpad
 rm ~/Library/Application\ Support/Dock/*.db; rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"; defaults write com.apple.dock ResetLaunchPad -bool true; sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
