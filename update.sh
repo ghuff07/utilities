@@ -23,8 +23,8 @@ brew cask update
 brew upgrade --all
 brew cu
 brew linkapps
-brew cleanup --force
-brew cask cleanup --force
+brew cleanup
+brew cask cleanup
 brew services cleanup
 
 # homebrew relink and prune
