@@ -53,6 +53,7 @@ gem install brakeman
 gem install bundler
 gem install bundler-audit
 gem install cane
+gem install cocoapods
 gem install compass
 gem install consistency_fail
 gem install cucumber
