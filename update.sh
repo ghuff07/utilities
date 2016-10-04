@@ -20,7 +20,7 @@ git fetch origin
 git reset --hard origin/master
 brew update
 brew cask update
-brew upgrade --all
+brew upgrade
 brew cu
 brew linkapps
 brew cleanup
