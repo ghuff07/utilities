@@ -77,13 +77,13 @@ gometalinter --install --update
 go get -u all
 
 # android sdk update
-expect -c "
-set timeout -1;
-spawn android update sdk --no-ui
-expect {
-    \"Do you accept the license\" { exp_send \"y\r\"; exp_continue }
-    eof
-} "
+# expect -c "
+# set timeout -1;
+# spawn android update sdk --no-ui
+# expect {
+#     \"Do you accept the license\" { exp_send \"y\r\"; exp_continue }
+#     eof
+# } "
 
 # security tool update
 bundle-audit update
