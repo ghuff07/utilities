@@ -15,7 +15,7 @@ sudo softwareupdate -ia
 xcode-select --install
 
 # homebrew update
-cd "$(brew --prefix)"
+cd "$(brew --prefix)/homebrew"
 git fetch origin
 git reset --hard origin/master
 brew update
