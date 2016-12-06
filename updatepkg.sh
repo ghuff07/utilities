@@ -12,6 +12,8 @@ fi
 
 # python / pip packages
 pip install bandit
+pip install Django
+pip install Flask
 pip install jupyter
 pip install numpy
 pip install pep8
@@ -22,6 +24,8 @@ pip install virtualenv
 
 # python3 / pip3 packages
 pip3 install bandit
+pip3 install Django
+pip3 install Flask
 pip3 install jupyter
 pip3 install numpy
 pip3 install pep8
