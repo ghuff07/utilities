@@ -19,7 +19,6 @@ cd "$(brew --prefix)/homebrew"
 git fetch origin
 git reset --hard origin/master
 brew update
-brew cask update
 brew upgrade
 brew cu
 brew linkapps
