@@ -11,6 +11,7 @@ else
 fi
 
 # python / pip packages
+pip install ansible
 pip install bandit
 pip install Django
 pip install Flask
@@ -23,6 +24,7 @@ pip install scipy
 pip install virtualenv
 
 # python3 / pip3 packages
+pip3 install ansible
 pip3 install bandit
 pip3 install Django
 pip3 install Flask

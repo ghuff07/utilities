@@ -72,7 +72,8 @@ pear update-channels
 pear upgrade
 
 # golang / go update
-gometalinter --install --update
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install
 go get -u all
 
 # android sdk update
