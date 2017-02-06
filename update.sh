@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local && sudo chown -R $(whoami):staff /Users/$(whoami)
@@ -98,6 +99,9 @@ mackup -f backup
 #     \"Are you sure that you want to replace it\" { exp_send \"Yes\r\"; exp_continue }
 #     eof
 # } "
+
+# backup homebrew
+#backupbrew >~/restorebrew.sh && chmod +x ~/restorebrew.sh
 
 # quicklook
 qlmanage -r
