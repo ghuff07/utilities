@@ -12,6 +12,7 @@ fi
 
 # OSX and xcode update
 sudo softwareupdate -ia
+mas upgrade
 xcode-select --install
 
 # homebrew update
