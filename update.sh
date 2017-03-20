@@ -23,7 +23,6 @@ git reset --hard origin/master
 brew update
 brew upgrade
 brew cu
-brew linkapps
 brew cleanup
 brew cask cleanup
 brew services cleanup
