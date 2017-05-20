@@ -22,7 +22,7 @@ git fetch origin
 git reset --hard origin/master
 brew update
 brew upgrade
-brew cu -a -y
+brew cu -a -y --cleanup
 brew cleanup
 brew cask cleanup
 brew services cleanup
