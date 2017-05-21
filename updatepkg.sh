@@ -44,16 +44,22 @@ npm install -g csslint
 npm install -g eslint
 npm install -g express
 npm install -g generator-angular
+npm install -g generator-aspnet
+npm install -g generator-hottowel
 npm install -g generator-karma
 npm install -g grunt-cli
+npm install -g gulp
+npm install -g gulp-cli
 npm install -g less
 npm install -g license-checker
+npm install -g mocha
 npm install -g nodemon
 npm install -g nsp
 npm install -g retire
 npm install -g secscan
 npm install -g snyk
 npm install -g stylus
+npm install -g typescript
 npm install -g yo
 
 # ruby / gem packages
