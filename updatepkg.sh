@@ -39,7 +39,9 @@ pip3 install virtualenv
 
 # node.js / npm packages
 npm install -g bower
+npm install -g browserify
 npm install -g coffee-script
+npm install -g create-react-app
 npm install -g csslint
 npm install -g eslint
 npm install -g express
@@ -50,15 +52,18 @@ npm install -g generator-karma
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g gulp-cli
+npm install -g jasmine
 npm install -g less
 npm install -g license-checker
 npm install -g mocha
 npm install -g nodemon
 npm install -g nsp
+npm install -g react-native-cli
 npm install -g retire
 npm install -g secscan
 npm install -g snyk
 npm install -g stylus
+npm install -g tslint
 npm install -g typescript
 npm install -g yo
 
