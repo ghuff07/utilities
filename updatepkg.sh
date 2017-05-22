@@ -51,6 +51,8 @@ pip3 install virtualenv
 pip3 install yapf
 
 # node.js / npm packages
+npm install -g autoprefixer
+npm install -g ava
 npm install -g bower
 npm install -g browserify
 npm install -g coffee-script
@@ -76,17 +78,22 @@ npm install -g ios-deploy
 npm install -g jasmine
 npm install -g less
 npm install -g license-checker
+npm install -g markdownlint-cli
 npm install -g mocha
 npm install -g nodemon
 npm install -g nsp
+npm install -g postcss-cli
+npm install -g prettier
 npm install -g react-native-cli
 npm install -g retire
 npm install -g secscan
 npm install -g snyk
+npm install -g stylelint
 npm install -g stylus
 npm install -g ts-node
 npm install -g tslint
 npm install -g typescript
+npm install -g xo
 npm install -g yo
 
 # ruby / gem packages
