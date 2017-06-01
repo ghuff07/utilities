@@ -41,7 +41,7 @@ pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # node.js / npm update
 npm install -g npm@latest
-npm cache clean
+npm cache verify
 npm update -g
 
 # bower update
