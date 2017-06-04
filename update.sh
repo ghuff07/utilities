@@ -40,7 +40,7 @@ pip3 install --upgrade pip setuptools wheel
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # node.js / npm update
-npm install -g npm@latest
+npm install -g npm
 npm cache verify
 npm update -g
 
