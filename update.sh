@@ -32,7 +32,7 @@ brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwr
 brew prune
 
 # python / pip update
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools wheel
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # python3 / pip3 update
@@ -40,7 +40,7 @@ pip3 install --upgrade pip setuptools wheel
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
 # node.js / npm update
-npm install -g npm
+npm install -g npm@latest
 npm cache verify
 npm update -g
 
@@ -49,6 +49,11 @@ bower cache clean
 bower update
 
 # rvm / ruby / gem update
+rvm use system
+gem update --system
+gem update
+gem cleanup
+rvm use default
 rvm get head
 rvm rubygems latest
 rvm all do gem update --system
@@ -82,13 +87,6 @@ bundle-audit update
 
 # mackup
 mackup -f backup
-# expect -c "
-# set timeout -1;
-# spawn mackup backup
-# expect {
-#     \"Are you sure that you want to replace it\" { exp_send \"Yes\r\"; exp_continue }
-#     eof
-# } "
 
 # backup homebrew
 #backupbrew >~/restorebrew.sh && chmod +x ~/restorebrew.sh
