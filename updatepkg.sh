@@ -18,15 +18,20 @@ pip install bandit
 pip install Django
 pip install flake8
 pip install Flask
+pip install ipaddress
+pip install ipwhois
 pip install jupyter
 pip install nose
 pip install numpy
 pip install pep8
+pip install pyersinia
 pip install pyflakes
 pip install pylint
 pip install pytest
 pip install pyyaml
 pip install scipy
+pip install shodan
+pip install speedtest-cli
 pip install virtualenv
 pip install yapf
 
@@ -37,6 +42,8 @@ pip3 install bandit
 pip3 install Django
 pip3 install flake8
 pip3 install Flask
+pip3 install ipaddress
+pip3 install ipwhois
 pip3 install jupyter
 pip3 install mypy-lang
 pip3 install nose
@@ -45,12 +52,16 @@ pip3 install pep8
 pip3 install pyflakes
 pip3 install pylint
 pip3 install pytest
+pip3 install pythonwhois
 pip3 install pyyaml
 pip3 install scipy
+pip3 install shodan
+pip3 install speedtest-cli
 pip3 install virtualenv
 pip3 install yapf
 
 # node.js / npm packages
+npm install -g appium
 npm install -g autoprefixer
 npm install -g ava
 npm install -g bower
@@ -60,6 +71,8 @@ npm install -g cordova
 npm install -g create-react-app
 npm install -g csslint
 npm install -g eslint
+npm install -g eslint-plugin-scanjs-rules
+npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g express
 npm install -g generator-angular
 npm install -g generator-angular-fullstack
@@ -105,7 +118,7 @@ gem install cocoapods
 gem install compass
 gem install consistency_fail
 gem install cucumber
-gem install dawnscanner -P MediumSecurity
+gem install dawnscanner
 gem install debase
 gem install debride
 gem install fasterer
@@ -114,7 +127,7 @@ gem install gauntlt
 gem install github-linguist
 gem install gitrob
 gem install haml
-gem install idb
+#gem install idb
 gem install license_finder
 gem install nokogiri
 gem install rails
