@@ -32,8 +32,8 @@ brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwr
 brew prune
 
 # python / pip update
-pip install --upgrade pip setuptools wheel
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
+pip2 install --upgrade pip setuptools wheel
+pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # python3 / pip3 update
 pip3 install --upgrade pip setuptools wheel
