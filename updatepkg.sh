@@ -12,28 +12,28 @@ else
 fi
 
 # python / pip packages
-pip install ansible
-pip install autopep8
-pip install bandit
-pip install Django
-pip install flake8
-pip install Flask
-pip install ipaddress
-pip install ipwhois
-pip install jupyter
-pip install nose
-pip install numpy
-pip install pep8
-pip install pyersinia
-pip install pyflakes
-pip install pylint
-pip install pytest
-pip install pyyaml
-pip install scipy
-pip install shodan
-pip install speedtest-cli
-pip install virtualenv
-pip install yapf
+pip2 install ansible
+pip2 install autopep8
+pip2 install bandit
+pip2 install Django
+pip2 install flake8
+pip2 install Flask
+pip2 install ipaddress
+pip2 install ipwhois
+pip2 install jupyter
+pip2 install nose
+pip2 install numpy
+pip2 install pep8
+pip2 install pyersinia
+pip2 install pyflakes
+pip2 install pylint
+pip2 install pytest
+pip2 install pyyaml
+pip2 install scipy
+pip2 install shodan
+pip2 install speedtest-cli
+pip2 install virtualenv
+pip2 install yapf
 
 # python3 / pip3 packages
 pip3 install ansible
