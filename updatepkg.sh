@@ -15,7 +15,6 @@ fi
 pip2 install ansible
 pip2 install autopep8
 pip2 install bandit
-pip2 install Django
 pip2 install flake8
 pip2 install Flask
 pip2 install ipaddress
@@ -74,6 +73,7 @@ npm install -g eslint
 npm install -g eslint-plugin-scanjs-rules
 npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g express
+npm install -g flow-bin
 npm install -g generator-angular
 npm install -g generator-angular-fullstack
 npm install -g generator-aspnet
@@ -91,6 +91,7 @@ npm install -g ios-deploy
 npm install -g jasmine
 npm install -g less
 npm install -g license-checker
+npm install -g lighthouse
 npm install -g markdownlint-cli
 npm install -g mocha
 npm install -g nodemon
@@ -98,6 +99,7 @@ npm install -g nsp
 npm install -g postcss-cli
 npm install -g prettier
 npm install -g react-native-cli
+npm install -g react-native-git-upgrade
 npm install -g retire
 npm install -g secscan
 npm install -g snyk
@@ -119,7 +121,7 @@ gem install compass
 gem install consistency_fail
 gem install cucumber
 gem install dawnscanner
-gem install debase
+#gem install debase # fails to install
 gem install debride
 gem install fasterer
 gem install fastri
@@ -127,7 +129,7 @@ gem install gauntlt
 gem install github-linguist
 gem install gitrob
 gem install haml
-#gem install idb
+gem install idb
 gem install license_finder
 gem install nokogiri
 gem install rails
