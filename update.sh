@@ -64,7 +64,7 @@ rvm cleanup all
 rvm repair all
 
 # php / pear udate
-brew_php="php71"
+brew_php="php72"
 brew info $brew_php | grep /usr/local/Cellar/$brew_php | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "chmod -R ug+w path/lib/php"
 brew info $brew_php | grep /usr/local/Cellar/$brew_php | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
 pear config-set auto_discover 1
