@@ -11,33 +11,14 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-# python / pip packages
-pip2 install ansible
-pip2 install autopep8
-pip2 install bandit
-pip2 install flake8
-pip2 install Flask
-pip2 install ipaddress
-pip2 install ipwhois
-pip2 install jupyter
-pip2 install nose
-pip2 install numpy
-pip2 install pep8
-pip2 install pyersinia
-pip2 install pyflakes
-pip2 install pylint
-pip2 install pytest
-pip2 install pyyaml
-pip2 install scipy
-pip2 install shodan
-pip2 install speedtest-cli
-pip2 install virtualenv
-pip2 install yapf
+# python2 / pip packages
+pip install pyersinia
 
 # python3 / pip3 packages
 pip3 install ansible
 pip3 install autopep8
 pip3 install bandit
+pip3 install biopython
 pip3 install Django
 pip3 install flake8
 pip3 install Flask
@@ -47,6 +28,7 @@ pip3 install jupyter
 pip3 install mypy-lang
 pip3 install nose
 pip3 install numpy
+pip3 install pandas
 pip3 install pep8
 pip3 install pyflakes
 pip3 install pylint
@@ -121,7 +103,7 @@ gem install compass
 gem install consistency_fail
 gem install cucumber
 gem install dawnscanner
-#gem install debase # fails to install
+gem install debase
 gem install debride
 gem install fasterer
 gem install fastri
@@ -155,3 +137,8 @@ pear install --force PHP_CodeSniffer
 go get -u github.com/golang/lint/golint
 go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update
+
+# R
+#install.packages("ggplot2")
+#install.packages("dplyr")
+#install.packages("tidyr")
