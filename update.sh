@@ -20,8 +20,10 @@ xcode-select --install
 cd "$(brew --prefix)/homebrew"
 git fetch origin
 git reset --hard origin/master
+brew tap --repair
 brew update
 brew upgrade
+brew prune
 brew cu -a -y --cleanup
 brew cleanup
 brew cask cleanup
@@ -31,9 +33,9 @@ brew services cleanup
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 brew prune
 
-# python / pip update
-pip2 install --upgrade pip setuptools wheel
-pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
+# python2 / pip update
+pip install --upgrade pip setuptools wheel
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # python3 / pip3 update
 pip3 install --upgrade pip setuptools wheel
@@ -64,9 +66,6 @@ rvm cleanup all
 rvm repair all
 
 # php / pear udate
-brew_php="php72"
-brew info $brew_php | grep /usr/local/Cellar/$brew_php | head -n1 | cut -d \  -f 1 | xargs -I path sh -c "chmod -R ug+w path/lib/php"
-brew info $brew_php | grep /usr/local/Cellar/$brew_php | head -n1 | cut -d \  -f 1 | cut -c25-27 | xargs -I version sh -c "pear config-set php_ini /usr/local/etc/php/version/php.ini system"
 pear config-set auto_discover 1
 pear upgrade pear
 pear channel-discover pear.phpmd.org
