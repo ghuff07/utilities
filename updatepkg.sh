@@ -16,15 +16,20 @@ pip install pyersinia
 
 # python3 / pip3 packages
 pip3 install ansible
+pip3 install ansible-lint
 pip3 install autopep8
+pip3 install awscli
+pip3 install awsscout2
 pip3 install bandit
 pip3 install biopython
 pip3 install Django
 pip3 install flake8
 pip3 install Flask
+pip3 install flawfinder
 pip3 install ipaddress
 pip3 install ipwhois
 pip3 install jupyter
+pip3 install keras
 pip3 install mypy-lang
 pip3 install nose
 pip3 install numpy
@@ -38,6 +43,7 @@ pip3 install pyyaml
 pip3 install scipy
 pip3 install shodan
 pip3 install speedtest-cli
+pip3 install tensorflow
 pip3 install virtualenv
 pip3 install yapf
 
@@ -98,6 +104,7 @@ gem install brakeman
 gem install bundler
 gem install bundler-audit
 gem install cane
+gem install cfn-nag
 gem install cocoapods
 gem install compass
 gem install consistency_fail
@@ -107,6 +114,7 @@ gem install debase
 gem install debride
 gem install fasterer
 gem install fastri
+gem install foodcritic
 gem install gauntlt
 gem install github-linguist
 gem install gitrob
@@ -114,6 +122,7 @@ gem install haml
 gem install idb
 gem install license_finder
 gem install nokogiri
+gem install puppet-lint
 gem install rails
 gem install rails-audit
 gem install rails_best_practices
@@ -125,6 +134,8 @@ gem install ruby-debug-ide
 gem install ruby-lint
 gem install scss_lint
 gem install selenium-webdriver
+gem install serverspec
+gem install ssh_scan
 gem install tarantula
 
 # php / pear packages
@@ -135,6 +146,8 @@ pear install --force PHP_CodeSniffer
 
 # golang / go packages
 go get -u github.com/golang/lint/golint
+go get -u github.com/ezekg/git-hound
+go get -u github.com/tools/godep
 go get -u github.com/alecthomas/gometalinter
 gometalinter --install --update
 
