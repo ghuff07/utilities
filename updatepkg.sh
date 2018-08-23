@@ -11,9 +11,6 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-# python2 / pip packages
-pip install pyersinia
-
 # python3 / pip3 packages
 pip3 install ansible
 pip3 install ansible-lint
@@ -35,6 +32,7 @@ pip3 install nose
 pip3 install numpy
 pip3 install pandas
 pip3 install pep8
+pip3 install pyersinia
 pip3 install pyflakes
 pip3 install pylint
 pip3 install pytest
