@@ -44,6 +44,7 @@ pip3 install speedtest-cli
 pip3 install tensorflow
 pip3 install virtualenv
 pip3 install yapf
+pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
 
 # node.js / npm packages
 npm install -g appium
@@ -51,7 +52,7 @@ npm install -g autoprefixer
 npm install -g ava
 npm install -g bower
 npm install -g browserify
-npm install -g coffee-script
+npm install -g coffeescript
 npm install -g cordova
 npm install -g create-react-app
 npm install -g csslint
@@ -141,6 +142,7 @@ pear channel-discover pear.phpmd.org
 pear channel-discover pear.pdepend.org
 pear install --force --alldeps phpmd/PHP_PMD
 pear install --force PHP_CodeSniffer
+pear install --force Console_GetoptPlus
 
 # golang / go packages
 go get -u github.com/golang/lint/golint
