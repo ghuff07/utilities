@@ -26,7 +26,6 @@ brew upgrade
 brew prune
 brew cu -a -y --cleanup
 brew cleanup -s
-brew cask cleanup
 brew services cleanup
 
 # homebrew relink and prune
@@ -51,6 +50,7 @@ bower cache clean
 bower update
 
 # rvm / ruby / gem update
+rvm requirements
 rvm use system
 gem update --system
 gem update
@@ -67,14 +67,14 @@ rvm repair all
 
 # php / pear udate
 pear config-set auto_discover 1
-pear upgrade pear
 pear channel-discover pear.phpmd.org
 pear channel-discover pear.pdepend.org
 pear install --alldeps phpmd/PHP_PMD
 pear install PHP_CodeSniffer
+pear install Console_GetoptPlus
 pear clear-cache
 pear update-channels
-pear upgrade
+pear upgrade-all
 
 # golang / go update
 go get -u github.com/alecthomas/gometalinter
