@@ -50,13 +50,13 @@ bower cache clean
 bower update
 
 # rvm / ruby / gem update
+rvm get head
 rvm requirements
 rvm use system
 gem update --system
 gem update
 gem cleanup
 rvm use default
-rvm get head
 rvm rubygems latest
 rvm all do gem update --system
 rvm all do gem update
