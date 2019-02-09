@@ -22,15 +22,15 @@ git fetch origin
 git reset --hard origin/master
 brew tap --repair
 brew update
+brew unlink macvim
+brew unlink vim
 brew upgrade
-brew prune
 brew cu -a -y --cleanup
 brew cleanup -s
 brew services cleanup
 
 # homebrew relink and prune
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
-brew prune
 
 # python2 / pip update
 pip install --upgrade pip setuptools wheel
@@ -83,9 +83,6 @@ go get -u all
 
 # security tool update
 bundle-audit update
-
-# mackup
-#mackup -f backup
 
 # quicklook
 qlmanage -r
