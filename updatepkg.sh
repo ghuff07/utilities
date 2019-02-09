@@ -41,6 +41,7 @@ pip3 install pyyaml
 pip3 install scipy
 pip3 install shodan
 pip3 install speedtest-cli
+pip3 install tbb
 pip3 install tensorflow
 pip3 install virtualenv
 pip3 install yapf
