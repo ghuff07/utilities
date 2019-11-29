@@ -45,13 +45,11 @@ pip3 install tbb
 pip3 install tensorflow
 pip3 install virtualenv
 pip3 install yapf
-pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
 
 # node.js / npm packages
 npm install -g appium
 npm install -g autoprefixer
 npm install -g ava
-npm install -g bower
 npm install -g browserify
 npm install -g coffeescript
 npm install -g cordova
@@ -75,7 +73,6 @@ npm install -g grunt-cli
 npm install -g gulp
 npm install -g gulp-cli
 npm install -g htmlhint
-npm install -g ios-deploy
 npm install -g jasmine
 npm install -g less
 npm install -g license-checker
@@ -97,6 +94,7 @@ npm install -g ts-node
 npm install -g tslint
 npm install -g typescript
 npm install -g xo
+npm install -g yarn
 npm install -g yo
 
 # ruby / gem packages
@@ -119,7 +117,6 @@ gem install gauntlt
 gem install github-linguist
 gem install gitrob
 gem install haml
-gem install idb
 gem install license_finder
 gem install nokogiri
 gem install puppet-lint
@@ -138,21 +135,5 @@ gem install serverspec
 gem install ssh_scan
 gem install tarantula
 
-# php / pear packages
-pear channel-discover pear.phpmd.org
-pear channel-discover pear.pdepend.org
-pear install --force --alldeps phpmd/PHP_PMD
-pear install --force PHP_CodeSniffer
-pear install --force Console_GetoptPlus
-
 # golang / go packages
-go get -u github.com/golang/lint/golint
-go get -u github.com/ezekg/git-hound
-go get -u github.com/tools/godep
-go get -u github.com/alecthomas/gometalinter
-gometalinter --install --update
-
-# R
-#install.packages("ggplot2")
-#install.packages("dplyr")
-#install.packages("tidyr")
+go get github.com/ezekg/git-hound
