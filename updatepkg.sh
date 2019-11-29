@@ -137,3 +137,6 @@ gem install tarantula
 
 # golang / go packages
 go get github.com/ezekg/git-hound
+
+# php / pecl packages
+pecl install xdebug
