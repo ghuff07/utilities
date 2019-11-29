@@ -22,8 +22,8 @@ git fetch origin
 git reset --hard origin/master
 brew tap --repair
 brew update
-brew unlink macvim
-brew unlink vim
+brew reinstall python@2 python
+brew unlink macvim vim
 brew upgrade
 brew cu -a -y --cleanup
 brew cleanup -s
@@ -45,12 +45,8 @@ npm install -g npm@latest
 npm cache verify
 npm update -g
 
-# bower update
-bower cache clean
-bower update
-
 # rvm / ruby / gem update
-rvm get head
+rvm get stable
 rvm requirements
 rvm use system
 gem update --system
@@ -66,20 +62,14 @@ rvm cleanup all
 rvm repair all
 
 # php / pear udate
-pear config-set auto_discover 1
-pear channel-discover pear.phpmd.org
-pear channel-discover pear.pdepend.org
-pear install --alldeps phpmd/PHP_PMD
-pear install PHP_CodeSniffer
-pear install Console_GetoptPlus
 pear clear-cache
+pecl clear-cache
 pear update-channels
-pear upgrade-all
+pecl update-channels
 
 # golang / go update
-go get -u github.com/alecthomas/gometalinter
-gometalinter --install
 go get -u all
+go clean
 
 # security tool update
 bundle-audit update
