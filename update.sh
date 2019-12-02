@@ -26,8 +26,6 @@ git fetch origin
 git reset --hard origin/master
 brew tap --repair
 brew update
-brew reinstall python@2 python
-brew unlink macvim vim
 brew upgrade
 brew cu -a -y --cleanup
 brew cleanup -s
@@ -35,10 +33,6 @@ brew services cleanup
 
 # homebrew relink and prune
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
-
-# python2 / pip update
-pip install --upgrade pip setuptools wheel
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 
 # python3 / pip3 update
 pip3 install --upgrade pip setuptools wheel
@@ -66,6 +60,7 @@ rvm cleanup all
 rvm repair all
 
 # php / pear udate
+pecl upgrade xdebug
 pear clear-cache
 pecl clear-cache
 pear update-channels
@@ -92,6 +87,5 @@ sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
 sudo periodic daily weekly monthly
 
 # checkups
-yo doctor
 brew cask doctor
 brew doctor
