@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# Text color variables
+LG='\033[0;33m' # Yellow
+NC='\033[0m'    # No Color
+
 sudo -v
 while true; do
   sudo -n true
   sleep 60
   kill -0 "$$" || exit
 done 2>/dev/null &
+
+# File and folder ownership
+echo -e "${LG}[1/7] Resetting file and folder ownership${NC}"
 sudo chflags norestricted /usr/local && sudo chown -R $(whoami) $(brew --prefix)/* && sudo chown -R $(whoami):staff /Users/$(whoami)
 
 # Load RVM into a shell session *as a function*
@@ -15,7 +22,8 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-# homebrew packages
+# Homebrew formulas
+echo -e "${LG}[2/7] Installing Homebrew formulae${NC}"
 brew reinstall ack
 brew reinstall ansible
 brew reinstall autopep8
@@ -104,6 +112,7 @@ brew reinstall yarn
 brew reinstall zsh
 
 # python3 / pip3 packages
+echo -e "${LG}[3/7] Installing Python packages${NC}"
 pip3 install --upgrade pip
 pip3 install --upgrade setuptools
 pip3 install --upgrade wheel
@@ -112,13 +121,14 @@ pip3 install shodan
 pip3 install tensorflow
 
 # node.js / npm packages
+echo -e "${LG}[4/7] Installing Node.js packages${NC}"
 npm install -g npm@latest
 npm install -g eslint
 npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g eslint-plugin-scanjs-rules
 
 # ruby / gem packages
-gem install bundler
+echo -e "${LG}[5/7] Installing Ruby gems${NC}"
 gem install debase
 gem install rails
 gem install rails-audit
@@ -127,7 +137,9 @@ gem install ruby-debug-ide
 gem install solargraph
 
 # golang / go packages
+echo -e "${LG}[6/7] Installing Go packages${NC}"
 go get github.com/ezekg/git-hound
 
 # php / pecl packages
+echo -e "${LG}[7/7] Installing PHP packages${NC}"
 pecl install xdebug
