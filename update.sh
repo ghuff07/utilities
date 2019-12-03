@@ -15,12 +15,12 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
-# OSX and xcode update
+# MacOS App and Xcode maintenance
 sudo softwareupdate -ia
 mas upgrade
 xcode-select --install
 
-# homebrew update
+# Homebrew maintenance
 cd "$(brew --prefix)/homebrew"
 git fetch origin
 git reset --hard origin/master
@@ -30,20 +30,18 @@ brew upgrade
 brew cu -a -y --cleanup
 brew cleanup -s
 brew services cleanup
-
-# homebrew relink and prune
 brew list -1 | xargs -I formula sh -c "brew unlink formula && brew link --overwrite formula"
 
-# python3 / pip3 update
+# Python maintenance
 pip3 install --upgrade pip setuptools wheel
 pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip3 install -U
 
-# node.js / npm update
+# Node.js maintenance
 npm install -g npm@latest
 npm cache verify
 npm update -g
 
-# rvm / ruby / gem update
+# Ruby maintenance
 rvm get stable
 rvm requirements
 rvm use system
@@ -58,34 +56,33 @@ rvm all do gem regenerate_binstubs
 rvm all do gem cleanup
 rvm cleanup all
 rvm repair all
+bundle-audit update
 
-# php / pear udate
+# PHP maintenance
 pecl upgrade xdebug
 pear clear-cache
 pecl clear-cache
 pear update-channels
 pecl update-channels
 
-# golang / go update
+# Go maintenance
 go get -u all
 go clean
 
-# security tool update
-bundle-audit update
-
-# quicklook
+# Quick Look maintenance
 qlmanage -r
 qlmanage -r cache
 
-# reset launchpad
+# Backup dot and config files
+mackup backup
+
+# MacOS system maintenance
+sudo periodic daily weekly monthly
 rm ~/Library/Application\ Support/Dock/*.db
 rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"
 defaults write com.apple.dock ResetLaunchPad -bool true
 sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
 
-# MacOS maintenance
-sudo periodic daily weekly monthly
-
-# checkups
+# Final checkups
 brew cask doctor
 brew doctor
