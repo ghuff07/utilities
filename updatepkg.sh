@@ -15,13 +15,6 @@ done 2>/dev/null &
 echo -e "${LG}[1/7] Resetting file and folder ownership${NC}"
 sudo chflags norestricted /usr/local && sudo chown -R $(whoami) $(brew --prefix)/* && sudo chown -R $(whoami):staff /Users/$(whoami)
 
-# Load RVM into a shell session *as a function*
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm"
-else
-  printf "ERROR: An RVM installation was not found.\n"
-fi
-
 # Homebrew formulas
 echo -e "${LG}[2/7] Installing Homebrew formulae${NC}"
 brew reinstall ack
@@ -35,6 +28,7 @@ brew reinstall couchdb
 brew reinstall dep
 brew reinstall dependency-check
 brew reinstall diffutils
+brew reinstall dnsmasq
 brew reinstall ed
 brew reinstall elasticsearch
 brew reinstall emacs
@@ -55,6 +49,7 @@ brew reinstall go
 brew reinstall golangci-lint
 brew reinstall gpatch
 brew reinstall gradle
+brew reinstall graphviz
 brew reinstall grep
 brew reinstall groovy
 brew reinstall gzip
@@ -77,15 +72,17 @@ brew reinstall mongodb-community
 brew reinstall mysql
 brew reinstall nano
 brew reinstall nmap
-brew reinstall node
 brew reinstall numpy
+brew reinstall nvm
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
 brew reinstall postgresql
 brew reinstall pylint
-brew reinstall python
+brew reinstall pyenv
+brew reinstall pyenv-virtualenv
 brew reinstall rabbitmq
+brew reinstall rbenv
 brew reinstall redis
 brew reinstall rsync
 brew reinstall rustup-init
@@ -97,7 +94,6 @@ brew reinstall shellcheck
 brew reinstall shfmt
 brew reinstall sonar-scanner
 brew reinstall sonarqube
-brew reinstall speedtest-cli
 brew reinstall ssllabs-scan
 brew reinstall subversion
 brew reinstall terraform
@@ -111,18 +107,15 @@ brew reinstall wget
 brew reinstall yarn
 brew reinstall zsh
 
-# python3 / pip3 packages
+# python / pip packages
 echo -e "${LG}[3/7] Installing Python packages${NC}"
-pip3 install --upgrade pip
-pip3 install --upgrade setuptools
-pip3 install --upgrade wheel
-pip3 install pytest
-pip3 install shodan
-pip3 install tensorflow
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install pytest
 
 # node.js / npm packages
 echo -e "${LG}[4/7] Installing Node.js packages${NC}"
-npm install -g npm@latest
+nvm install-latest-npm
 npm install -g eslint
 npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g eslint-plugin-scanjs-rules
