@@ -11,12 +11,16 @@ while true; do
   kill -0 "$$" || exit
 done 2>/dev/null &
 
-# File and folder ownership
-echo -e "${LG}[1/7] Resetting file and folder ownership${NC}"
-sudo chflags norestricted /usr/local && sudo chown -R $(whoami) $(brew --prefix)/* && sudo chown -R $(whoami):staff /Users/$(whoami)
+# allow alias for brew
+shopt -s expand_aliases
+source ~/.aliases
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Homebrew formulas
-echo -e "${LG}[2/7] Installing Homebrew formulae${NC}"
+echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
 brew reinstall ack
 brew reinstall ansible
 brew reinstall autopep8
@@ -73,7 +77,6 @@ brew reinstall mysql
 brew reinstall nano
 brew reinstall nmap
 brew reinstall numpy
-brew reinstall nvm
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
@@ -108,20 +111,20 @@ brew reinstall yarn
 brew reinstall zsh
 
 # python / pip packages
-echo -e "${LG}[3/7] Installing Python packages${NC}"
+echo -e "${LG}[2/6] Installing Python packages${NC}"
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install pytest
 
 # node.js / npm packages
-echo -e "${LG}[4/7] Installing Node.js packages${NC}"
+echo -e "${LG}[3/6] Installing Node.js packages${NC}"
 nvm install-latest-npm
 npm install -g eslint
 npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g eslint-plugin-scanjs-rules
 
 # ruby / gem packages
-echo -e "${LG}[5/7] Installing Ruby gems${NC}"
+echo -e "${LG}[4/6] Installing Ruby gems${NC}"
 gem install debase
 gem install rails
 gem install rails-audit
@@ -130,9 +133,9 @@ gem install ruby-debug-ide
 gem install solargraph
 
 # golang / go packages
-echo -e "${LG}[6/7] Installing Go packages${NC}"
+echo -e "${LG}[5/6] Installing Go packages${NC}"
 go get github.com/ezekg/git-hound
 
 # php / pecl packages
-echo -e "${LG}[7/7] Installing PHP packages${NC}"
+echo -e "${LG}[6/6] Installing PHP packages${NC}"
 pecl install xdebug
