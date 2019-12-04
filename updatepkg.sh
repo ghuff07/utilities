@@ -75,6 +75,7 @@ brew reinstall minikube
 brew reinstall mongodb-community
 brew reinstall mysql
 brew reinstall nano
+brew reinstall nginx
 brew reinstall nmap
 brew reinstall numpy
 brew reinstall openssh
