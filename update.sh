@@ -43,7 +43,7 @@ echo -e "${LG}[5/18] Updating Homebrew casks${NC}"
 brew cu -a -y --cleanup
 
 echo -e "${LG}[6/18] Recreating Homebrew Brewfile${NC}"
-brew bundle dump -force
+brew bundle dump --force
 
 echo -e "${LG}[7/18] Cleaning up Homebrew${NC}"
 brew cleanup -s
@@ -98,7 +98,7 @@ sudo softwareupdate -ia
 
 # Backup dot and config files
 echo -e "${LG}[16/18] Backing up dot and config files${NC}"
-mackup backup
+mackup backup -f
 
 # Reset Launchpad
 echo -e "${LG}[17/18] Resetting Launchpad${NC}"

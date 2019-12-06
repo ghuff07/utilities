@@ -26,9 +26,7 @@ brew reinstall ansible
 brew reinstall autopep8
 brew reinstall bash-completion@2
 brew reinstall binutils
-brew reinstall cassandra
 brew reinstall coreutils
-brew reinstall couchdb
 brew reinstall dep
 brew reinstall dependency-check
 brew reinstall diffutils
@@ -63,10 +61,11 @@ brew reinstall jenkins
 brew reinstall jupyterlab
 brew reinstall kibana
 brew reinstall kotlin
-brew reinstall kubectl
+brew reinstall kubernetes-cli
 brew reinstall less
 brew reinstall logstash
 brew reinstall m4
+brew reinstall mackup
 brew reinstall make
 brew reinstall mas
 brew reinstall matplotlib
@@ -82,10 +81,9 @@ brew reinstall openssh
 brew reinstall perl
 brew reinstall php
 brew reinstall postgresql
-brew reinstall pylint
 brew reinstall pyenv
 brew reinstall pyenv-virtualenv
-brew reinstall rabbitmq
+brew reinstall pylint
 brew reinstall rbenv
 brew reinstall redis
 brew reinstall rsync
