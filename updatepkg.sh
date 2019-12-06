@@ -24,6 +24,7 @@ echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
 brew reinstall ack
 brew reinstall ansible
 brew reinstall autopep8
+brew reinstall aws-sam-cli
 brew reinstall bash-completion@2
 brew reinstall binutils
 brew reinstall coreutils
