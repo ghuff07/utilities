@@ -100,12 +100,14 @@ sudo softwareupdate -ia
 echo -e "${LG}[16/18] Backing up dot and config files${NC}"
 mackup backup -f
 
-# Reset Launchpad
+# Reset Launchpad and wallpaper
 echo -e "${LG}[17/18] Resetting Launchpad${NC}"
+osascript -e 'quit app "Daily Wallpaper - for Bing"'
 rm ~/Library/Application\ Support/Dock/*.db
 rm -rf "$TMPDIR../0/com.apple.dock.launchpad/db"
 defaults write com.apple.dock ResetLaunchPad -bool true
 sudo killall -SIGKILL cfprefsd && killall Dock && killall Finder
+osascript -e 'launch app "Daily Wallpaper - for Bing"'
 
 # Final checkups
 echo -e "${LG}[18/18] Running final health checks${NC}"
