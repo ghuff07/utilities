@@ -25,6 +25,7 @@ brew reinstall ack
 brew reinstall ansible
 brew reinstall autopep8
 brew reinstall aws-sam-cli
+brew reinstall awscli
 brew reinstall bash-completion@2
 brew reinstall binutils
 brew reinstall coreutils
