@@ -72,7 +72,6 @@ bundle-audit update
 
 # PHP maintenance
 echo -e "${LG}[11/18] Updating PHP packages${NC}"
-pecl install xdebug
 pear clear-cache
 pecl clear-cache
 pear update-channels
