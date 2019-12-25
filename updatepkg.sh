@@ -66,6 +66,7 @@ brew reinstall kotlin
 brew reinstall kubernetes-cli
 brew reinstall less
 brew reinstall logstash
+brew reinstall luarocks
 brew reinstall m4
 brew reinstall mackup
 brew reinstall make
@@ -108,6 +109,7 @@ brew reinstall vim
 brew reinstall watch
 brew reinstall wdiff
 brew reinstall wget
+brew reinstall wireshark
 brew reinstall yarn
 brew reinstall zsh
 
