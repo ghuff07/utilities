@@ -109,7 +109,6 @@ brew reinstall vim
 brew reinstall watch
 brew reinstall wdiff
 brew reinstall wget
-brew reinstall wireshark
 brew reinstall yarn
 brew reinstall zsh
 
