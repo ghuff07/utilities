@@ -24,7 +24,7 @@ echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
 brew reinstall ack
 brew reinstall ansible
 brew reinstall autopep8
-brew reinstall aws-sam-cli
+brew reinstall aws/tap/aws-sam-cli
 brew reinstall awscli
 brew reinstall bash-completion@2
 brew reinstall binutils
@@ -50,7 +50,7 @@ brew reinstall gnu-which
 brew reinstall gnupg
 brew reinstall gnutls
 brew reinstall go
-brew reinstall golangci-lint
+brew reinstall golangci/tap/golangci-lint
 brew reinstall gpatch
 brew reinstall gradle
 brew reinstall graphviz
@@ -71,10 +71,10 @@ brew reinstall m4
 brew reinstall mackup
 brew reinstall make
 brew reinstall mas
-brew reinstall matplotlib
+brew reinstall brewsci/bio/matplotlib
 brew reinstall maven
 brew reinstall minikube
-brew reinstall mongodb-community
+brew reinstall mongodb/brew/mongodb-community
 brew reinstall mysql
 brew reinstall nano
 brew reinstall nginx
