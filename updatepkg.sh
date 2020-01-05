@@ -97,6 +97,7 @@ brew reinstall scipy
 brew reinstall screen
 brew reinstall shellcheck
 brew reinstall shfmt
+brew reinstall skaffold
 brew reinstall sonar-scanner
 brew reinstall sonarqube
 brew reinstall ssllabs-scan
