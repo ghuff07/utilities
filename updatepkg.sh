@@ -29,7 +29,6 @@ brew reinstall awscli
 brew reinstall bash-completion@2
 brew reinstall binutils
 brew reinstall coreutils
-brew reinstall dep
 brew reinstall dependency-check
 brew reinstall diffutils
 brew reinstall dnsmasq
