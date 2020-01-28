@@ -28,6 +28,7 @@ brew reinstall aws/tap/aws-sam-cli
 brew reinstall awscli
 brew reinstall bash-completion@2
 brew reinstall binutils
+brew reinstall cmake
 brew reinstall coreutils
 brew reinstall dependency-check
 brew reinstall diffutils
@@ -74,11 +75,13 @@ brew reinstall brewsci/bio/matplotlib
 brew reinstall maven
 brew reinstall minikube
 brew reinstall mongodb/brew/mongodb-community
+brew reinstall mono
 brew reinstall mysql
 brew reinstall nano
 brew reinstall nginx
 brew reinstall nmap
 brew reinstall numpy
+brew reinstall opa
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
