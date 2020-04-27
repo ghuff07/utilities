@@ -21,8 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Homebrew formulas
 echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
-brew reinstall ack
-brew reinstall ansible
 brew reinstall autopep8
 brew reinstall aws/tap/aws-sam-cli
 brew reinstall awscli
@@ -32,9 +30,7 @@ brew reinstall cmake
 brew reinstall coreutils
 brew reinstall dependency-check
 brew reinstall diffutils
-brew reinstall dnsmasq
 brew reinstall ed
-brew reinstall elasticsearch
 brew reinstall emacs
 brew reinstall file-formula
 brew reinstall findutils
@@ -57,15 +53,12 @@ brew reinstall graphviz
 brew reinstall grep
 brew reinstall groovy
 brew reinstall gzip
-brew reinstall helm
 brew reinstall httpd
-brew reinstall jenkins
 brew reinstall jupyterlab
-brew reinstall kibana
 brew reinstall kotlin
 brew reinstall kubernetes-cli
 brew reinstall less
-brew reinstall logstash
+brew reinstall lua
 brew reinstall luarocks
 brew reinstall m4
 brew reinstall mackup
@@ -81,7 +74,6 @@ brew reinstall nano
 brew reinstall nginx
 brew reinstall nmap
 brew reinstall numpy
-brew reinstall opa
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
@@ -90,7 +82,6 @@ brew reinstall pyenv
 brew reinstall pyenv-virtualenv
 brew reinstall pylint
 brew reinstall rbenv
-brew reinstall redis
 brew reinstall rsync
 brew reinstall rustup-init
 brew reinstall sbt
@@ -99,12 +90,8 @@ brew reinstall scipy
 brew reinstall screen
 brew reinstall shellcheck
 brew reinstall shfmt
-brew reinstall skaffold
-brew reinstall sonar-scanner
-brew reinstall sonarqube
 brew reinstall ssllabs-scan
 brew reinstall subversion
-brew reinstall terraform
 brew reinstall tomcat
 brew reinstall tree
 brew reinstall unzip
