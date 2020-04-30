@@ -51,7 +51,7 @@ brew services cleanup
 
 # Python maintenance
 echo -e "${LG}[8/18] Updating Python packages${NC}"
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools wheel
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 pyenv rehash
 
