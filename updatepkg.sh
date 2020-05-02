@@ -49,7 +49,6 @@ brew reinstall go
 brew reinstall golangci/tap/golangci-lint
 brew reinstall gpatch
 brew reinstall gradle
-brew reinstall graphviz
 brew reinstall grep
 brew reinstall groovy
 brew reinstall gzip
