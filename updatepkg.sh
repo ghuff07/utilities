@@ -21,9 +21,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # Homebrew formulas
 echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
+brew reinstall anyenv
 brew reinstall autopep8
 brew reinstall aws/tap/aws-sam-cli
 brew reinstall awscli
+brew reinstall bash
 brew reinstall bash-completion@2
 brew reinstall binutils
 brew reinstall cmake
@@ -34,7 +36,6 @@ brew reinstall ed
 brew reinstall emacs
 brew reinstall file-formula
 brew reinstall findutils
-brew reinstall fzf
 brew reinstall gawk
 brew reinstall gdb # gdb requires further actions to make it work. See `brew info gdb`.
 brew reinstall git
@@ -45,7 +46,6 @@ brew reinstall gnu-tar
 brew reinstall gnu-which
 brew reinstall gnupg
 brew reinstall gnutls
-brew reinstall go
 brew reinstall golangci/tap/golangci-lint
 brew reinstall gpatch
 brew reinstall gradle
@@ -53,7 +53,6 @@ brew reinstall grep
 brew reinstall groovy
 brew reinstall gzip
 brew reinstall httpd
-brew reinstall jupyterlab
 brew reinstall kotlin
 brew reinstall kubernetes-cli
 brew reinstall less
@@ -63,7 +62,6 @@ brew reinstall m4
 brew reinstall mackup
 brew reinstall make
 brew reinstall mas
-brew reinstall brewsci/bio/matplotlib
 brew reinstall maven
 brew reinstall minikube
 brew reinstall mongodb/brew/mongodb-community
@@ -72,24 +70,15 @@ brew reinstall mysql
 brew reinstall nano
 brew reinstall nginx
 brew reinstall nmap
-brew reinstall numpy
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
 brew reinstall postgresql
-brew reinstall pyenv
-brew reinstall pyenv-virtualenv
 brew reinstall pylint
-brew reinstall rbenv
 brew reinstall rsync
-brew reinstall rustup-init
-brew reinstall sbt
-brew reinstall scala
-brew reinstall scipy
 brew reinstall screen
 brew reinstall shellcheck
 brew reinstall shfmt
-brew reinstall ssllabs-scan
 brew reinstall subversion
 brew reinstall tomcat
 brew reinstall tree
@@ -98,18 +87,18 @@ brew reinstall vim
 brew reinstall watch
 brew reinstall wdiff
 brew reinstall wget
-brew reinstall yarn
 brew reinstall zsh
 
 # python / pip packages
 echo -e "${LG}[2/6] Installing Python packages${NC}"
 pip install --upgrade pip
 pip install --upgrade setuptools
+pip install --upgrade wheel
 pip install pytest
 
 # node.js / npm packages
 echo -e "${LG}[3/6] Installing Node.js packages${NC}"
-nvm install-latest-npm
+npm install -g npm
 npm install -g eslint
 npm install -g eslint-plugin-no-unsafe-innerhtml
 npm install -g eslint-plugin-scanjs-rules
@@ -125,7 +114,6 @@ gem install solargraph
 
 # golang / go packages
 echo -e "${LG}[5/6] Installing Go packages${NC}"
-go get github.com/ezekg/git-hound
 
 # php / pecl packages
 echo -e "${LG}[6/6] Installing PHP packages${NC}"
