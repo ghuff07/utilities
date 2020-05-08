@@ -36,7 +36,7 @@ brew update
 brew upgrade
 
 echo -e "${LG}[5/19] Updating Homebrew casks${NC}"
-brew cu -a -y --cleanup
+brew cu -a -y --cleanup --no-quarantine
 
 echo -e "${LG}[6/19] Recreating Homebrew Brewfile${NC}"
 brew bundle dump --force
