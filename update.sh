@@ -53,8 +53,6 @@ jenv rehash
 nodenv rehash
 pyenv rehash
 rbenv rehash
-sbtenv rehash
-scalaenv rehash
 
 # Python maintenance
 echo -e "${LG}[9/19] Updating Python packages${NC}"
