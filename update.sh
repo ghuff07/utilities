@@ -86,7 +86,7 @@ go clean
 
 # Android SDK maintenance
 echo -e "${LG}[14/20] Updating Android SDK packages${NC}"
-$ sdkmanager --update
+sdkmanager --update
 
 # Quick Look maintenance
 echo -e "${LG}[15/20] Reloading Quick Look generators${NC}"
