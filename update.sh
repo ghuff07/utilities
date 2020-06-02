@@ -27,9 +27,6 @@ xcrun simctl delete unavailable
 # Homebrew maintenance
 echo -e "${LG}[3/20] Prepping Homebrew${NC}"
 alias brew='PATH=${PATH//$(pyenv root)\/shims:/} brew'
-cd "$(brew --prefix)/homebrew"
-git fetch origin
-git reset --hard origin/master
 brew tap --repair
 
 echo -e "${LG}[4/20] Updating Homebrew formulae${NC}"
