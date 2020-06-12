@@ -15,10 +15,6 @@ done 2>/dev/null &
 shopt -s expand_aliases
 source ~/.aliases
 
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # Homebrew formulas
 echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
 brew reinstall anyenv
