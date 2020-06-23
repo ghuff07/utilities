@@ -1,15 +1,10 @@
 #!/bin/bash
 
+sudo -v
+
 # Text color variables
 LG='\033[0;33m' # Yellow
 NC='\033[0m'    # No Color
-
-sudo -v
-while true; do
-  sudo -n true
-  sleep 60
-  kill -0 "$$" || exit
-done 2>/dev/null &
 
 # allow alias for brew
 shopt -s expand_aliases
