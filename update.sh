@@ -104,5 +104,4 @@ killall Dock
 
 # Final checkups
 echo -e "${LG}[20/20] Running final health checks${NC}"
-brew cask doctor
-brew doctor
+brew doctor --verbose
