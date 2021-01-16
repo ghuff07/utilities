@@ -41,6 +41,7 @@ brew services cleanup
 # dev environment maintenance
 echo -e "${LG}[8/20] Updating **envs and shims${NC}"
 anyenv install --update
+anyenv update
 goenv rehash
 jenv rehash
 nodenv rehash
