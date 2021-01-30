@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -v
+
 # Text color variables
 LG='\033[0;33m' # Yellow
 NC='\033[0m'    # No Color
@@ -94,7 +96,8 @@ npm install -g eslint-plugin-scanjs-rules
 
 # ruby / gem packages
 echo -e "${LG}[4/6] Installing Ruby gems${NC}"
-gem install debase
+#gem install debase
+gem install debase -v 0.2.5.beta2
 gem install rails
 gem install rails-audit
 gem install rubocop
