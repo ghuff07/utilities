@@ -52,6 +52,7 @@ rbenv rehash
 echo -e "${LG}[9/20] Updating Python packages${NC}"
 pip install --upgrade pip setuptools wheel
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
+python -m pip check
 
 # Node.js maintenance
 echo -e "${LG}[10/20] Updating Node.js packages${NC}"
