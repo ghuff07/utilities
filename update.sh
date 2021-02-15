@@ -23,6 +23,7 @@ xcrun simctl delete unavailable
 echo -e "${LG}[3/20] Prepping Homebrew${NC}"
 alias brew='PATH=${PATH//$(pyenv root)\/shims:/} brew'
 brew tap --repair
+brew completions link
 
 echo -e "${LG}[4/20] Updating Homebrew formulae${NC}"
 brew update
