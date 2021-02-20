@@ -62,6 +62,7 @@ npm cache verify
 
 # Ruby maintenance
 echo -e "${LG}[11/20] Updating Ruby gems${NC}"
+update_rubygems
 gem update --system
 gem update
 gem cleanup
@@ -76,7 +77,6 @@ pecl update-channels
 
 # Go maintenance
 echo -e "${LG}[13/20] Updating Go packages${NC}"
-go get -u all
 go clean
 
 # Android SDK maintenance
