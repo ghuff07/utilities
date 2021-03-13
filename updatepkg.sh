@@ -91,8 +91,8 @@ pip install pytest
 echo -e "${LG}[3/6] Installing Node.js packages${NC}"
 npm install -g npm
 npm install -g eslint
-npm install -g eslint-plugin-no-unsafe-innerhtml
-npm install -g eslint-plugin-scanjs-rules
+npm install -g eslint-plugin-no-unsanitized
+npm install -g eslint-plugin-security
 
 # ruby / gem packages
 echo -e "${LG}[4/6] Installing Ruby gems${NC}"
