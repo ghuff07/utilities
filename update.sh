@@ -58,6 +58,7 @@ python -m pip check
 # Node.js maintenance
 echo -e "${LG}[10/19] Updating Node.js packages${NC}"
 npm update -g
+rm ~/.npm/_logs/*-debug.log #temporary
 npm cache verify
 
 # Ruby maintenance
