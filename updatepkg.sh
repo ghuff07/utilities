@@ -85,6 +85,7 @@ echo -e "${LG}[2/6] Installing Python packages${NC}"
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install --upgrade wheel
+pip install bandit
 pip install pytest
 
 # node.js / npm packages
