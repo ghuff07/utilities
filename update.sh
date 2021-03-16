@@ -63,7 +63,6 @@ npm cache verify
 
 # Ruby maintenance
 echo -e "${LG}[11/19] Updating Ruby gems${NC}"
-update_rubygems
 gem update --system
 gem update
 gem cleanup
