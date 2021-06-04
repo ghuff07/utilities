@@ -58,7 +58,6 @@ python -m pip check
 # Node.js maintenance
 echo -e "${LG}[10/19] Updating Node.js packages${NC}"
 npm update -g
-rm ~/.npm/_logs/*-debug.log #temporary
 npm cache verify
 
 # Ruby maintenance
@@ -70,6 +69,7 @@ bundle-audit update
 
 # PHP maintenance
 echo -e "${LG}[12/19] Updating PHP packages${NC}"
+mkdir /private/tmp/pear/cache
 pear clear-cache
 pecl clear-cache
 pear update-channels
