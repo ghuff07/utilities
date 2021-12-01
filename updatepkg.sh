@@ -37,7 +37,7 @@ brew reinstall gnu-tar
 brew reinstall gnu-which
 brew reinstall gnupg
 brew reinstall gnutls
-brew reinstall golangci/tap/golangci-lint
+brew reinstall golangci-lint
 brew reinstall gpatch
 brew reinstall gradle
 brew reinstall grep
