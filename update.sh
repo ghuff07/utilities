@@ -69,7 +69,6 @@ bundle-audit update
 
 # PHP maintenance
 echo -e "${LG}[12/19] Updating PHP packages${NC}"
-mkdir /private/tmp/pear/cache
 pear clear-cache
 pecl clear-cache
 pear update-channels
