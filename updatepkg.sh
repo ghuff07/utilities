@@ -14,7 +14,7 @@ source ~/.aliases
 echo -e "${LG}[1/6] Installing Homebrew formulae${NC}"
 brew reinstall anyenv
 brew reinstall autopep8
-brew reinstall aws/tap/aws-sam-cli
+brew reinstall aws-sam-cli
 brew reinstall awscli
 brew reinstall bash
 brew reinstall bash-completion@2
@@ -56,21 +56,22 @@ brew reinstall mas
 brew reinstall maven
 brew reinstall minikube
 brew reinstall mongodb/brew/mongodb-community
-brew reinstall mono
 brew reinstall mysql
 brew reinstall nano
 brew reinstall nginx
 brew reinstall nmap
+brew reinstall openjdk
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
-brew reinstall postgresql
+brew reinstall postgresql@15
 brew reinstall pylint
 brew reinstall rsync
 brew reinstall screen
 brew reinstall shellcheck
 brew reinstall shfmt
 brew reinstall subversion
+brew reinstall tcl-tk
 brew reinstall tomcat
 brew reinstall tree
 brew reinstall unzip
@@ -90,10 +91,10 @@ pip install pytest
 
 # node.js / npm packages
 echo -e "${LG}[3/6] Installing Node.js packages${NC}"
-npm install -g npm
-npm install -g eslint
-npm install -g eslint-plugin-no-unsanitized
-npm install -g eslint-plugin-security
+npm install --location=global npm
+npm install --location=global eslint
+npm install --location=global eslint-plugin-no-unsanitized
+npm install --location=global eslint-plugin-security
 
 # ruby / gem packages
 echo -e "${LG}[4/6] Installing Ruby gems${NC}"

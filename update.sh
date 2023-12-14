@@ -57,7 +57,7 @@ python -m pip check
 
 # Node.js maintenance
 echo -e "${LG}[10/19] Updating Node.js packages${NC}"
-npm update -g
+npm update --location=global
 npm cache verify
 
 # Ruby maintenance
