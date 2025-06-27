@@ -64,7 +64,7 @@ brew reinstall openjdk
 brew reinstall openssh
 brew reinstall perl
 brew reinstall php
-brew reinstall postgresql@15
+brew reinstall postgresql@16
 brew reinstall pylint
 brew reinstall rsync
 brew reinstall screen
