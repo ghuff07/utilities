@@ -29,6 +29,7 @@ brew reinstall file-formula
 brew reinstall findutils
 brew reinstall gawk
 brew reinstall gdb # gdb requires further actions to make it work. See `brew info gdb`.
+brew reinstall gh
 brew reinstall git
 brew reinstall git-secrets
 brew reinstall gnu-indent
